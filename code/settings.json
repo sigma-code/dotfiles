@@ -1,0 +1,70 @@
+{
+    "workbench.colorTheme": "Monokai",
+    "editor.fontFamily": "'MesloLGS NF'",
+    "editor.renderWhitespace": "all",
+    "editor.tabSize": 2,
+    "editor.fontSize": 16,
+    "terminal.explorerKind": "external",
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "java.configuration.checkProjectSettingsExclusions": false,
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-1.8",
+            "path": "/usr/lib/jvm/java-8-openjdk/",
+            "default": true
+        },
+        {
+            "name": "JavaSE-15",
+            "path": "/usr/lib/jvm/java-15-openjdk/"
+        }
+    ],
+    "java.project.importOnFirstTimeStartup": "automatic",
+    "java.semanticHighlighting.enabled": true,
+    "javascript.preferences.importModuleSpecifier": "relative",
+    "javascript.preferences.quoteStyle": "single",
+    "typescript.preferences.importModuleSpecifier": "relative",
+    "typescript.preferences.quoteStyle": "single",
+    "workbench.iconTheme": "vs-seti",
+    "editor.suggestSelection": "first",
+    "gitlens.defaultDateShortFormat": "D/MM/YYYY",
+    "gitlens.defaultDateFormat": "D/MM/YYYY, h:mma",
+    "maven.executable.preferMavenWrapper": true,
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "vetur.format.options.useTabs": true,
+    "vetur.format.defaultFormatterOptions": {
+        "js-beautify-html": {
+            "wrap_attributes": "force-expand-multiline"
+        },
+        "prettyhtml": {
+            "printWidth": 100,
+            "singleQuote": false,
+            "wrapAttributes": false,
+            "sortAttributes": false
+        }
+    },
+    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/home/pablo/.vscode-oss/extensions/gabrielbb.vscode-lombok-1.0.0/server/lombok.jar\"",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "window.zoomLevel": 2,
+    "redhat.telemetry.enabled": true
+}

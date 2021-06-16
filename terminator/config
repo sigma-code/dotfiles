@@ -1,0 +1,142 @@
+[global_config]
+  suppress_multiple_term_dialog = True
+  always_split_with_profile = True
+[keybindings]
+  go_prev = ""
+  split_horiz = <Primary><Shift>i
+  split_vert = <Primary><Shift>o
+  new_window = ""
+[profiles]
+  [[default]]
+    background_color = "#272822"
+    background_darkness = 0.85
+    background_type = transparent
+    cursor_shape = underline
+    cursor_color = "#d0d0d0"
+    font = MesloLGS NF 14
+    foreground_color = "#d0d0d0"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_lines = 100000
+    scrollback_infinite = True
+    palette = "#151515:#fb9fb1:#acc267:#ddb26f:#6fc2ef:#e1a3ee:#12cfc0:#d0d0d0:#505050:#fb9fb1:#acc267:#ddb26f:#6fc2ef:#e1a3ee:#12cfc0:#f5f5f5"
+    use_system_font = False
+    copy_on_selection = True
+  [[code]]
+    background_color = "#272822"
+    cursor_shape = underline
+    cursor_color = "#d0d0d0"
+    font = MesloLGS NF 14
+    foreground_color = "#d0d0d0"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_lines = 100000
+    scrollback_infinite = True
+    palette = "#151515:#fb9fb1:#acc267:#ddb26f:#6fc2ef:#e1a3ee:#12cfc0:#d0d0d0:#505050:#fb9fb1:#acc267:#ddb26f:#6fc2ef:#e1a3ee:#12cfc0:#f5f5f5"
+    use_system_font = False
+    copy_on_selection = True
+  [[nvim]]
+    background_color = "#212733"
+    cursor_shape = underline
+    cursor_color = "#d0d0d0"
+    font = MesloLGS NF 14
+    foreground_color = "#d0d0d0"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_lines = 100000
+    scrollback_infinite = True
+    palette = "#151515:#fb9fb1:#acc267:#ddb26f:#6fc2ef:#e1a3ee:#12cfc0:#d0d0d0:#505050:#fb9fb1:#acc267:#ddb26f:#6fc2ef:#e1a3ee:#12cfc0:#f5f5f5"
+    use_system_font = False
+    copy_on_selection = True
+[layouts]
+  [[default]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 937a0ae8-014c-4c2b-8015-cb9fc210a7ac
+      last_active_window = True
+      maximised = False
+      order = 0
+      parent = ""
+      position = 26:23
+      size = 1050, 773
+      title = Terminator
+      type = Window
+    [[[terminal1]]]
+      order = 0
+      parent = child0
+      profile = default
+      type = Terminal
+      uuid = 937a0ae8-014c-4c2b-8015-cb9fc210a7ac
+      command = ""
+  [[dashboard]]
+    [[[child0]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 0:27
+      maximised = True
+      fullscreen = False
+      size = 3440, 1376
+      title = Terminator
+      last_active_term = dcb45b86-a254-4c96-a4bb-a80c05e78611
+      last_active_window = True
+    [[[child1]]]
+      type = HPaned
+      parent = child0
+      order = 0
+      position = 1163
+      ratio = 0.3385735080058224
+    [[[child2]]]
+      type = VPaned
+      parent = child1
+      order = 0
+      position = 885
+      ratio = 0.6455142231947484
+    [[[child3]]]
+      type = VPaned
+      parent = child2
+      order = 0
+      position = 548
+      ratio = 0.6227272727272727
+    [[[terminal4]]]
+      type = Terminal
+      parent = child3
+      order = 0
+      profile = default
+      uuid = 937a0ae8-014c-4c2b-8015-cb9fc210a7ac
+      command = while sleep 1; do clear; task; done
+    [[[terminal5]]]
+      type = Terminal
+      parent = child3
+      order = 1
+      profile = default
+      uuid = dcb45b86-a254-4c96-a4bb-a80c05e78611
+      command = while sleep 1; do clear; task summary; done
+    [[[terminal6]]]
+      type = Terminal
+      parent = child2
+      order = 1
+      profile = default
+      uuid = d65b7e3c-c275-4372-9218-5a6d96305c54
+      command = while sleep 1; do clear; task burndown.daily; done
+    [[[child7]]]
+      type = VPaned
+      parent = child1
+      order = 1
+      position = 911
+      ratio = 0.6644784828592268
+    [[[terminal8]]]
+      type = Terminal
+      parent = child7
+      order = 0
+      profile = default
+      uuid = 46c608ef-5e06-4e87-a99f-ef6bf6dd2190
+      command = bpytop
+    [[[terminal9]]]
+      type = Terminal
+      parent = child7
+      order = 1
+      profile = default
+      uuid = 7ac487c5-1ff6-4765-a534-ad21a1f81a16
+      command = ""
+[plugins]

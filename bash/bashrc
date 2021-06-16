@@ -1,0 +1,27 @@
+#
+# ~/.bashrc
+#
+# Default config
+# If not running interactively, don't do anything
+#[[ $- != *i* ]] && return
+#
+#alias ls='ls --color=auto'
+#PS1='[\u@\h \W]\$ '
+
+# symbols: ζ 𝝺 λ ⚡☣ ❖ ☢ ➢ ►
+
+# If not running interactively, don't do anything.
+[[ $- != *i* ]] && return
+
+# Aliases
+source $HOME/.dotfiles/aliases.sh
+# Environment variables
+source $HOME/.dotfiles/env-vars.sh
+# Custom functions
+source $HOME/.dotfiles/scripts/base.sh
+
+PS1="\[$(tformat lt-gray)\]\u\[$(tformat white bold)\] @ \[$(tformat gray)\]\h [\W]"
+PS1+="\[\$(git_color)\]\$(git_branch)\n"
+PS1+="\[$(tformat lt-gray)\] └─\[$(tformat yellow bold)\]λ\[$(tput sgr0)\]: "
+
+export PS1
