@@ -46,6 +46,7 @@ source $HOME/.dotfiles/nvim/cmd.vim
 source $HOME/.dotfiles/nvim/plugins.vim
 " Lua Configs
 luafile $HOME/.dotfiles/nvim/plugin-cfg/pgcfgtelescope.lua
+luafile $HOME/.dotfiles/nvim/plugin-cfg/pgcfgtreesitter.lua
 
 colorscheme ayu
 
