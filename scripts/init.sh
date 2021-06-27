@@ -58,10 +58,7 @@ function setup_zsh {
 # Setup Neovim
 function setup_nvim {
   echo -e "  Setting up: Neovim...\n"
-  mkdir -p $HOME/.config/nvim/
-  curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  sudo echo "source $dir/nvim/main.vim" > $HOME/.config/nvim/init.vim
+  ln -sf $dir/nvim $HOME/.config/nvim
 }
 
 # Setup terminator

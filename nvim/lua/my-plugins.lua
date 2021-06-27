@@ -31,7 +31,7 @@ local function install_all()
   vim.cmd("PackerInstall")
 end
 
-vim.cmd "autocmd BufWritePost plugins.lua PackerCompile" -- Auto compile when there are changes in plugins.lua
+vim.cmd "autocmd BufWritePost my-plugins.lua PackerCompile" -- Auto compile when there are changes in plugins.lua
 
 return require("packer").startup(function(use)
     -- Packer can manage itself as an optional plugin
@@ -49,6 +49,7 @@ return require("packer").startup(function(use)
     -- Telescope
     use "nvim-lua/popup.nvim"
     use "nvim-lua/plenary.nvim"
+    use "folke/trouble.nvim"
     use "nvim-telescope/telescope.nvim"
     use "nvim-telescope/telescope-fzy-native.nvim"
     use "nvim-telescope/telescope-project.nvim"
@@ -61,11 +62,12 @@ return require("packer").startup(function(use)
     -- LSP
     use "neovim/nvim-lspconfig"
     use "kabouzeid/nvim-lspinstall"
-    -- use "glepnir/lspsaga.nvim"
+    use "glepnir/lspsaga.nvim"
     -- use "folke/trouble.nvim"
 
     -- Git
     use "lewis6991/gitsigns.nvim"
+    use "tpope/vim-fugitive"
 
     -- Debugging
     -- use "mfussenegger/nvim-dap"
@@ -90,7 +92,7 @@ return require("packer").startup(function(use)
     use "kyazdani42/nvim-web-devicons"
 
     -- Colorschemes
-    use "ayu-theme/ayu-vim"
+    use "sainnhe/sonokai"
     use {"christianchiarulli/nvcode-color-schemes.vim", opt = true}
     use {"gruvbox-community/gruvbox", opt = true}
     use {"joshdick/onedark.vim", opt = true}
@@ -98,7 +100,7 @@ return require("packer").startup(function(use)
     use {"sts10/vim-pink-moon", opt = true}
     use {"arcticicestudio/nord-vim", opt = true}
     use {"cocopon/iceberg.vim", opt = true}
-    use {"sainnhe/sonokai", opt = true}
+    use {"ayu-theme/ayu-vim", opt = true}
 
 end)
 

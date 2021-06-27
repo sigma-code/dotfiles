@@ -73,8 +73,9 @@ time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["ayu-vim"] = {
-    loaded = true,
-    path = "/home/sigma/.local/share/nvim/site/pack/packer/start/ayu-vim"
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/sigma/.local/share/nvim/site/pack/packer/opt/ayu-vim"
   },
   ["dashboard-nvim"] = {
     loaded = true,
@@ -85,24 +86,32 @@ _G.packer_plugins = {
     path = "/home/sigma/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
   },
   gruvbox = {
-    loaded = true,
-    path = "/home/sigma/.local/share/nvim/site/pack/packer/start/gruvbox"
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/sigma/.local/share/nvim/site/pack/packer/opt/gruvbox"
   },
   ["iceberg.vim"] = {
-    loaded = true,
-    path = "/home/sigma/.local/share/nvim/site/pack/packer/start/iceberg.vim"
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/sigma/.local/share/nvim/site/pack/packer/opt/iceberg.vim"
   },
   ["lsp-rooter.nvim"] = {
     loaded = true,
     path = "/home/sigma/.local/share/nvim/site/pack/packer/start/lsp-rooter.nvim"
   },
-  ["nord-vim"] = {
+  ["lspsaga.nvim"] = {
     loaded = true,
-    path = "/home/sigma/.local/share/nvim/site/pack/packer/start/nord-vim"
+    path = "/home/sigma/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
+  },
+  ["nord-vim"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/sigma/.local/share/nvim/site/pack/packer/opt/nord-vim"
   },
   ["nvcode-color-schemes.vim"] = {
-    loaded = true,
-    path = "/home/sigma/.local/share/nvim/site/pack/packer/start/nvcode-color-schemes.vim"
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/sigma/.local/share/nvim/site/pack/packer/opt/nvcode-color-schemes.vim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -141,16 +150,18 @@ _G.packer_plugins = {
     path = "/home/sigma/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
   },
   ["onedark.vim"] = {
-    loaded = true,
-    path = "/home/sigma/.local/share/nvim/site/pack/packer/start/onedark.vim"
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/sigma/.local/share/nvim/site/pack/packer/opt/onedark.vim"
   },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/sigma/.local/share/nvim/site/pack/packer/start/packer.nvim"
   },
   ["plastic.vim"] = {
-    loaded = true,
-    path = "/home/sigma/.local/share/nvim/site/pack/packer/start/plastic.vim"
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/sigma/.local/share/nvim/site/pack/packer/opt/plastic.vim"
   },
   ["plenary.nvim"] = {
     loaded = true,
@@ -176,6 +187,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/sigma/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
+  ["trouble.nvim"] = {
+    loaded = true,
+    path = "/home/sigma/.local/share/nvim/site/pack/packer/start/trouble.nvim"
+  },
   ["vim-airline"] = {
     loaded = true,
     path = "/home/sigma/.local/share/nvim/site/pack/packer/start/vim-airline"
@@ -184,9 +199,14 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/sigma/.local/share/nvim/site/pack/packer/start/vim-airline-themes"
   },
-  ["vim-pink-moon"] = {
+  ["vim-fugitive"] = {
     loaded = true,
-    path = "/home/sigma/.local/share/nvim/site/pack/packer/start/vim-pink-moon"
+    path = "/home/sigma/.local/share/nvim/site/pack/packer/start/vim-fugitive"
+  },
+  ["vim-pink-moon"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/sigma/.local/share/nvim/site/pack/packer/opt/vim-pink-moon"
   },
   ["which-key.nvim"] = {
     loaded = true,

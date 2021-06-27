@@ -1,4 +1,7 @@
 HOME = vim.fn.expand('$HOME')
+CONFIG_PATH = vim.fn.stdpath('config')
+DATA_PATH = vim.fn.stdpath('data')
+CACHE_PATH = vim.fn.stdpath('cache')
 
 vim.o.autoread = true -- set autoread
 vim.o.encoding = "UTF-8" -- set encoding=UTF-8
@@ -33,16 +36,14 @@ vim.cmd('let g:airline#extensions#tabline#enabled = 1')
 vim.cmd('let g:python3_host_prog = "/usr/bin/python3"')
 vim.cmd('let ayucolor="mirage"')
 
--- Key mappings
-vim.cmd('source '..HOME..'/.dotfiles/nvim/keys.vim')
--- Commands
-vim.cmd('source '..HOME..'/.dotfiles/nvim/cmd.vim')
 -- Plugins
+require('my-keymaps')
 require('my-plugins')
 require('my-whichkey')
 require('my-treesitter')
 require('my-telescope')
 require('my-lsp')
+require('my-gitsigns')
 
-vim.cmd('colorscheme ayu') -- colorscheme ayu
+vim.cmd('colorscheme lunar')
 
