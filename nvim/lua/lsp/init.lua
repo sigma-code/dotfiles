@@ -1,32 +1,4 @@
---require('lsp.angular-ls')
---require('lsp.bash-ls')
---require('lsp.clangd')
---require('lsp.cmake-ls')
---require('lsp.css-ls')
---require('lsp.dart-ls')
---require('lsp.docker-ls')
---require('lsp.efm-general-ls')
---require('lsp.elm-ls')
---require('lsp.emmet-ls')
---require('lsp.graphql-ls')
---require('lsp.go-ls')
---require('lsp.html-ls')
---require('lsp.json-ls')
---require('lsp.js-ts-ls')
---require('lsp.kotlin-ls')
---require('lsp.latex-ls')
---require('lsp.lua-ls')
---require('lsp.php-ls')
---require('lsp.python-ls')
---require('lsp.ruby-ls')
---require('lsp.rust-ls')
---require('lsp.svelte-ls')
---require('lsp.terraform-ls')
--- require('lsp.tailwindcss-ls')
---require('lsp.vim-ls')
---require('lsp.vue-ls')
---require('lsp.yaml-ls')
---require('lsp.elixir-ls')
+require('lv-utils')
 
 -- TODO figure out why this don't work
 vim.fn.sign_define(
@@ -131,9 +103,9 @@ end
 local lsp_config = {}
 
 --if O.document_highlight then
-function lsp_config.common_on_attach(client, bufnr)
-    documentHighlight(client, bufnr)
-end
+    --function lsp_config.common_on_attach(client, bufnr)
+        --documentHighlight(client, bufnr)
+    --end
 --end
 
 function lsp_config.tsserver_on_attach(client, bufnr)
