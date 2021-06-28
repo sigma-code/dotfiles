@@ -49,21 +49,18 @@ return require("packer").startup(function(use)
     -- Telescope
     use "nvim-lua/popup.nvim"
     use "nvim-lua/plenary.nvim"
-    use "folke/trouble.nvim"
     use "nvim-telescope/telescope.nvim"
     use "nvim-telescope/telescope-fzy-native.nvim"
     use "nvim-telescope/telescope-project.nvim"
 
     -- Treesitter
     use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
-    -- use "windwp/nvim-ts-autotag"
-    -- use 'andymass/vim-matchup'
 
     -- LSP
     use "neovim/nvim-lspconfig"
     use "kabouzeid/nvim-lspinstall"
     use "glepnir/lspsaga.nvim"
-    -- use "folke/trouble.nvim"
+    use "folke/trouble.nvim"
 
     -- Git
     use "lewis6991/gitsigns.nvim"
@@ -82,7 +79,6 @@ return require("packer").startup(function(use)
 
     use "folke/which-key.nvim"
     use "windwp/nvim-autopairs"
-    use "kevinhwang91/nvim-bqf"
 
     -- Comments
     use "terrortylor/nvim-comment"
