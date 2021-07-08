@@ -5,7 +5,7 @@ local trouble = require("trouble.providers.telescope")
 -- '--color=never',
 require('telescope').setup {
     defaults = {
-        find_command = {'rg', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case'},
+        find_command = {'rg', '--hidden', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case'},
         prompt_position = "bottom",
         -- prompt_prefix = " ",
         prompt_prefix = " ",

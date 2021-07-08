@@ -6,6 +6,7 @@
   split_horiz = <Primary><Shift>i
   split_vert = <Primary><Shift>o
   new_window = ""
+  layout_launcher = <Shift><Alt>l
 [profiles]
   [[default]]
     background_color = "#272822"
@@ -36,7 +37,7 @@
     use_system_font = False
     copy_on_selection = True
   [[nvim]]
-    background_color = "#212733"
+    background_color = "#272822"
     cursor_shape = underline
     cursor_color = "#d0d0d0"
     font = MesloLGS NF 14
