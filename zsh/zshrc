@@ -40,6 +40,10 @@ zstyle :compinstall filename "$HOME/.zshrc"
 autoload -Uz compinit
 compinit
 
+# VI Mode
+export KEYTIMEOUT=1
+bindkey -v
+
 # Key bindings
 bindkey "\e[1~" beginning-of-line
 bindkey "\e[4~" end-of-line

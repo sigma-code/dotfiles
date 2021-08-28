@@ -24,7 +24,7 @@
     use_system_font = False
     copy_on_selection = True
   [[code]]
-    background_color = "#272822"
+    background_color = "#262626"
     cursor_shape = underline
     cursor_color = "#d0d0d0"
     font = MesloLGS NF 14
@@ -37,7 +37,7 @@
     use_system_font = False
     copy_on_selection = True
   [[nvim]]
-    background_color = "#272822"
+    background_color = "#2a2e38"
     cursor_shape = underline
     cursor_color = "#d0d0d0"
     font = MesloLGS NF 14
