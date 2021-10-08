@@ -18,5 +18,5 @@ alias k="kubectl"
 alias mk="minikube"
 alias top="bpytop"
 alias b="cd .."
-alias ip="ip -c -br address show"
+alias ipa="ip -c -br address show"
 
