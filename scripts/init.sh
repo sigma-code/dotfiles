@@ -101,23 +101,23 @@ function setup_gnome {
 
 # Install prefered programs
 function init_system {
-  install_pkgs
+  #install_pkgs
   if [ $? -eq 0 ]; then
     sudo usermod -aG docker $USER
-    sudo usermod -aG libvirt $USER
+    #sudo usermod -aG libvirt $USER
     git config --global pull.rebase true
     install_aurpkgs
     if [ $? -eq 0 ]; then
       setup_nvim
       setup_zsh
-      setup_term
-      setup_bpytop
-      setup_task
-      setup_code
-      setup_gnome
-      if [ $? -eq 0 ]; then
-        debloat
-      fi
+      #setup_term
+      #setup_bpytop
+      #setup_task
+      #setup_code
+      #setup_gnome
+      #if [ $? -eq 0 ]; then
+        #debloat
+      #fi
     fi
   fi
 }

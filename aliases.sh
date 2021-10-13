@@ -19,4 +19,5 @@ alias mk="minikube"
 alias top="bpytop"
 alias b="cd .."
 alias ipa="ip -c -br address show"
+alias code="vscodium"
 
