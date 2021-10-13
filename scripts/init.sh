@@ -88,7 +88,7 @@ function setup_task {
 function setup_code {
   echo -e "  Setting up: Code...\n"
   mkdir -p $HOME/.config/Code\ -\ OSS/User
-  ln -sf $dir/code/settings.json $HOME/.config/Code\ -\ OSS/User/settings.json
+  ln -sf $dir/code/settings.json $HOME/.config/VSCodium/User/settings.json
 }
 
 # Set gnome settings
@@ -111,13 +111,13 @@ function init_system {
       setup_nvim
       setup_zsh
       #setup_term
-      #setup_bpytop
-      #setup_task
-      #setup_code
-      #setup_gnome
-      #if [ $? -eq 0 ]; then
-        #debloat
-      #fi
+      setup_bpytop
+      # setup_task
+      setup_code
+      setup_gnome
+      if [ $? -eq 0 ]; then
+        debloat
+      fi
     fi
   fi
 }
