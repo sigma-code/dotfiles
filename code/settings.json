@@ -1,74 +1,44 @@
 {
-    "workbench.colorTheme": "Monokai",
+    "workbench.colorTheme": "Allure (rainglow)",
     "editor.fontFamily": "'Fira Code'",
     "editor.fontLigatures": true,
     "editor.renderWhitespace": "all",
     "editor.tabSize": 2,
     "editor.fontSize": 16,
     "terminal.explorerKind": "external",
-    "terminal.integrated.fontFamily": "'Fira Code'",
+    "terminal.integrated.fontFamily": "'MesloLGS NF'",
     "javascript.updateImportsOnFileMove.enabled": "always",
     "typescript.updateImportsOnFileMove.enabled": "always",
     "java.configuration.checkProjectSettingsExclusions": false,
     "java.configuration.runtimes": [
-
         {
             "name": "JavaSE-1.8",
-            "path": "/usr/lib/jvm/java-8-openjdk/",
-            "default": true
+            "path": "/usr/lib/jvm/java-8-openjdk/"
         },
         {
-            "name": "JavaSE-15",
-            "path": "/usr/lib/jvm/java-16-openjdk/"
+            "name": "JavaSE-11",
+            "path": "/usr/lib/jvm/java-11-openjdk/"
+        },
+        {
+            "name": "JavaSE-17",
+            "path": "/usr/lib/jvm/default/",
+            "default": true
         }
     ],
     "java.project.importOnFirstTimeStartup": "automatic",
-    "java.semanticHighlighting.enabled": true,
     "javascript.preferences.importModuleSpecifier": "relative",
     "javascript.preferences.quoteStyle": "single",
     "typescript.preferences.importModuleSpecifier": "relative",
     "typescript.preferences.quoteStyle": "single",
     "workbench.iconTheme": "vs-seti",
     "editor.suggestSelection": "first",
-    "gitlens.defaultDateShortFormat": "D/MM/YYYY",
-    "gitlens.defaultDateFormat": "D/MM/YYYY, h:mma",
+    "gitlens.defaultDateShortFormat": "DD/MM/YYYY",
+    "gitlens.defaultDateFormat": "DD/MM/YYYY, h:mma",
     "maven.executable.preferMavenWrapper": true,
     "[typescript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
-    "[vue]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "vetur.format.options.useTabs": true,
-    "vetur.format.defaultFormatterOptions": {
-        "js-beautify-html": {
-            "wrap_attributes": "force-expand-multiline"
-        },
-        "prettyhtml": {
-            "printWidth": 100,
-            "singleQuote": false,
-            "wrapAttributes": false,
-            "sortAttributes": false
-        }
-    },
     "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/home/sigma/.vscode-oss/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[javascriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
     "window.zoomLevel": 1,
-    "redhat.telemetry.enabled": true,
-    "gitlab.instanceUrl": "https://gitlab.com",
-    "codestream.email": "pmunoz@cidenet.com.co"
+    "window.restoreWindows": "none"
 }

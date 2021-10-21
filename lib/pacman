@@ -5,11 +5,14 @@ cmake
 discord
 dnsmasq
 ebtables
+firefox
 fuseiso
 fzf
 gnome
 gnome-tweak-tool
 jdk-openjdk
+jdk8-openjdk
+jdk11-openjdk
 jq
 kitty
 kubectl
@@ -22,6 +25,10 @@ ntfs-3g
 obs-studio
 pipewire
 pipewire-pulse
+podman
+podman-compose
+qgo
+rng-tools
 steam
 tor
 ttf-fira-code
@@ -30,4 +37,6 @@ unrar
 vagrant
 virt-manager
 xclip
+xdg-desktop-portal
+xdg-desktop-portal-gtk
 zsh

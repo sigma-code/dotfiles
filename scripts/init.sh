@@ -27,7 +27,7 @@ function aur {
 function install_pkgs {
   echo -e "  Installing: Packages...\n"
   pkgs=$(cat $dir/lib/pacman)
-  sudo pacman -Syyu --noconfirm $pkgs
+  sudo pacman -Syyu $pkgs
 }
 
 # Install AUR packages
@@ -61,11 +61,11 @@ function setup_nvim {
   ln -sf $dir/nvim $HOME/.config/nvim
 }
 
-# Setup terminator
+# Setup terminal
 function setup_term {
-  echo -e "  Setting up: Terminator...\n"
-  mkdir -p $HOME/.config/terminator
-  ln -sf $dir/terminator/config $HOME/.config/terminator/config
+  echo -e "  Setting up: Kitty...\n"
+  mkdir -p $HOME/.config/kitty
+  ln -sf $dir/kitty/kitty.conf $HOME/.config/kitty/kitty.conf
 }
 
 # Setup bpytop
@@ -101,18 +101,16 @@ function setup_gnome {
 
 # Install prefered programs
 function init_system {
-  #install_pkgs
+  install_pkgs
   if [ $? -eq 0 ]; then
-    sudo usermod -aG docker $USER
-    #sudo usermod -aG libvirt $USER
+    sudo usermod -aG libvirt $USER
     git config --global pull.rebase true
     install_aurpkgs
     if [ $? -eq 0 ]; then
       setup_nvim
       setup_zsh
-      #setup_term
+      setup_term
       setup_bpytop
-      # setup_task
       setup_code
       setup_gnome
       if [ $? -eq 0 ]; then
