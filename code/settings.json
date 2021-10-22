@@ -4,11 +4,10 @@
     "editor.fontLigatures": true,
     "editor.renderWhitespace": "all",
     "editor.tabSize": 2,
-    "editor.fontSize": 16,
+    "editor.fontSize": 14,
     "terminal.explorerKind": "external",
     "terminal.integrated.fontFamily": "'MesloLGS NF'",
     "javascript.updateImportsOnFileMove.enabled": "always",
-    "typescript.updateImportsOnFileMove.enabled": "always",
     "java.configuration.checkProjectSettingsExclusions": false,
     "java.configuration.runtimes": [
         {
@@ -39,6 +38,23 @@
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/home/sigma/.vscode-oss/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
-    "window.zoomLevel": 1,
-    "window.restoreWindows": "none"
+    "window.zoomLevel": 2,
+    "window.restoreWindows": "none",
+    "editor.lineNumbers": "relative",
+    "vim.leader": "<Space>",
+    "vim.highlightedyank.enable": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<Tab>"],
+            "commands": [":bn"]
+        },
+        {
+            "before": ["<S-Tab>"],
+            "commands": [":bp"]
+        }
+    ],
+    "vim.handleKeys": {
+        "<Ctrl-j>": false,
+        "<Ctrl-k>": false
+    }
 }

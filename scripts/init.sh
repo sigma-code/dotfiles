@@ -89,6 +89,7 @@ function setup_code {
   echo -e "  Setting up: Code...\n"
   mkdir -p $HOME/.config/Code\ -\ OSS/User
   ln -sf $dir/code/settings.json $HOME/.config/VSCodium/User/settings.json
+  ln -sf $dir/code/keybindings.json $HOME/.config/VSCodium/User/keybindings.json
 }
 
 # Set gnome settings
