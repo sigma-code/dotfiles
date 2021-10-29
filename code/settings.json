@@ -41,8 +41,15 @@
     "window.zoomLevel": 2,
     "window.restoreWindows": "none",
     "editor.lineNumbers": "relative",
-    "vim.leader": "<Space>",
+    "vim.leader": "<space>",
+    "vim.hlsearch": true,
     "vim.highlightedyank.enable": true,
+    "vim.handleKeys": {
+        "<Ctrl-j>": false,
+        "<Ctrl-k>": false,
+        "<Ctrl-d>": false,
+        "<Ctrl-q>": false
+    },
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": ["<Tab>"],
@@ -51,10 +58,41 @@
         {
             "before": ["<S-Tab>"],
             "commands": [":bp"]
+        },
+        {
+            "before": ["<leader>", "h"],
+            "commands": [":noh"]
+        },
+        {
+            "before": ["<leader>", "k"],
+            "commands": [
+                "editor.action.showHover"
+            ]
+        },
+        {
+            "before": ["g", "r"],
+            "commands": [
+                "editor.action.referenceSearch.trigger"
+            ]
         }
     ],
-    "vim.handleKeys": {
-        "<Ctrl-j>": false,
-        "<Ctrl-k>": false
-    }
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [
+                "<Tab>"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "<S-Tab>"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+    ],
+    "vim.debug.silent": false
 }

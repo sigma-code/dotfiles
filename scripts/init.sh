@@ -97,6 +97,7 @@ function setup_gnome {
   echo -e "  Setting up: Gnome...\n"
   dconf load /org/gnome/desktop/wm/keybindings/ < $dir/gnome/keybindings.dconf
   dconf load /org/gnome/settings-daemon/ < $dir/gnome/settings.dconf
+  dconf write /org/gnome/desktop/applications/terminal/exec kitty
   sudo systemctl enable rngd
 }
 
