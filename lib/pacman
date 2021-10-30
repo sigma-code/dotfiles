@@ -1,5 +1,5 @@
 bluez-utils
-bpytop
+btop
 celluloid
 cmake
 discord
@@ -8,6 +8,7 @@ ebtables
 firefox
 fuseiso
 fzf
+gimp
 gnome
 gnome-tweak-tool
 jdk-openjdk

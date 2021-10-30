@@ -68,12 +68,11 @@ function setup_term {
   ln -sf $dir/kitty/kitty.conf $HOME/.config/kitty/kitty.conf
 }
 
-# Setup bpytop
-function setup_bpytop {
-  echo -e "  Setting up: Bpytop...\n"
-  mkdir -p $HOME/.config/bpytop
-  ln -sf $dir/bpytop/bpytop.conf $HOME/.config/bpytop/bpytop.conf
-  ln -sfn $dir/bpytop/themes $HOME/.config/bpytop/user_themes
+# Setup btop
+function setup_btop {
+  echo -e "  Setting up: Btop...\n"
+  mkdir -p $HOME/.config/btop
+  ln -sf $dir/btop/btop.conf $HOME/.config/btop/btop.conf
 }
 
 # Setup task
@@ -87,7 +86,7 @@ function setup_task {
 # Setup code
 function setup_code {
   echo -e "  Setting up: Code...\n"
-  mkdir -p $HOME/.config/Code\ -\ OSS/User
+  mkdir -p $HOME/.config/VSCodium/User
   ln -sf $dir/code/settings.json $HOME/.config/VSCodium/User/settings.json
   ln -sf $dir/code/keybindings.json $HOME/.config/VSCodium/User/keybindings.json
 }
@@ -112,7 +111,7 @@ function init_system {
       setup_nvim
       setup_zsh
       setup_term
-      setup_bpytop
+      setup_btop
       setup_code
       setup_gnome
       if [ $? -eq 0 ]; then
