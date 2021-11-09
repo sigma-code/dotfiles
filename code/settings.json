@@ -45,10 +45,11 @@
     "vim.hlsearch": true,
     "vim.highlightedyank.enable": true,
     "vim.handleKeys": {
-        "<Ctrl-j>": false,
-        "<Ctrl-k>": false,
-        "<Ctrl-d>": false,
-        "<Ctrl-q>": false
+        "<C-j>": false,
+        "<C-k>": false,
+        "<C-d>": false,
+        "<C-b>": false,
+        "<C-q>": false
     },
     "vim.normalModeKeyBindingsNonRecursive": [
         {
@@ -67,6 +68,12 @@
             "before": ["<leader>", "k"],
             "commands": [
                 "editor.action.showHover"
+            ]
+        },
+        {
+            "before": ["<leader>", "e"],
+            "commands": [
+                "workbench.view.explorer"
             ]
         },
         {
@@ -94,5 +101,6 @@
             ]
         },
     ],
-    "vim.debug.silent": false
+    "vim.debug.silent": false,
+    "rust-client.engine": "rust-analyzer",
 }

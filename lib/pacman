@@ -29,11 +29,14 @@ pipewire-pulse
 podman
 podman-compose
 qgo
+qt5-wayland
 rng-tools
+rustup
 steam
 tor
 ttf-fira-code
 ttf-hack
+typescript
 unrar
 vagrant
 virt-manager
@@ -41,4 +44,3 @@ xclip
 xdg-desktop-portal
 xdg-desktop-portal-gtk
 zsh
-typescript
