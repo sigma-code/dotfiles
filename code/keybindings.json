@@ -2,6 +2,8 @@
 [
   // Toggle between terminal and editor focus
   { "key": "ctrl+j", "command": "workbench.action.terminal.focus"},
+  { "key": "ctrl+shift+k", "command": "workbench.action.terminal.focusNext" },
+  { "key": "ctrl+shift+j", "command": "workbench.action.terminal.focusPrevious" },
   {
     "key": "ctrl+k",
     "command": "workbench.action.focusActiveEditorGroup",
