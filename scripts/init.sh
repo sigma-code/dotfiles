@@ -1,8 +1,6 @@
 #! /bin/bash -e
 dir=$HOME/.dotfiles
 
-source $dir/scripts/debloat.sh
-
 # AUR quick installation
 function aur {
   start="$PWD"
@@ -114,9 +112,6 @@ function init_system {
       setup_btop
       setup_code
       setup_gnome
-      if [ $? -eq 0 ]; then
-        debloat
-      fi
     fi
   fi
 }
