@@ -1,4 +1,5 @@
 [/]
+close=['<Super>q']
 panel-run-dialog=['<Super>x']
 switch-applications=['<Super>Tab']
 switch-applications-backward=['<Shift><Super>Tab']

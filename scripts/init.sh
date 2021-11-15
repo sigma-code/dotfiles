@@ -92,9 +92,12 @@ function setup_code {
 # Set gnome settings
 function setup_gnome {
   echo -e "  Setting up: Gnome...\n"
+  mkdir -p $HOME/.local/share/icons
+  cp $dir/gnome/Zafiro-Icons-Dark $HOME/.local/share/icons
+  dconf load /org/gnome/desktop/interface/ < $dir/gnome/interface.dconf
+  dconf load /org/gnome/mutter/wayland/keybindings/ < $dir/gnome/restore-keys.dconf
   dconf load /org/gnome/desktop/wm/keybindings/ < $dir/gnome/keybindings.dconf
-  dconf load /org/gnome/settings-daemon/ < $dir/gnome/settings.dconf
-  dconf write /org/gnome/desktop/applications/terminal/exec kitty
+  dconf load /org/gnome/settings-daemon/plugins/media-keys/ < $dir/gnome/settings.dconf
   sudo systemctl enable rngd
 }
 

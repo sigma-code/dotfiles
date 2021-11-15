@@ -1,39 +1,33 @@
-[plugins/media-keys]
+[/]
 custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/']
+screensaver=['<Super>Escape']
 
-[plugins/media-keys/custom-keybindings/custom0]
+[custom-keybindings/custom0]
 binding='<Super>t'
-command='terminator'
+command='kitty'
 name='Terminal'
 
-[plugins/media-keys/custom-keybindings/custom1]
+[custom-keybindings/custom1]
 binding='<Super>e'
 command='nautilus'
 name='Files'
 
-[plugins/media-keys/custom-keybindings/custom2]
+[custom-keybindings/custom2]
 binding='<Super>f'
-command='firefox-developer-edition'
+command='firefox'
 name='Firefox'
 
-[plugins/media-keys/custom-keybindings/custom3]
+[custom-keybindings/custom3]
 binding='<Super>b'
 command='brave'
 name='Brave'
 
-[plugins/media-keys/custom-keybindings/custom4]
+[custom-keybindings/custom4]
 binding='<Super>braceleft'
 command='gnome-control-center'
 name='Settings'
 
-[plugins/media-keys/custom-keybindings/custom5]
+[custom-keybindings/custom5]
 binding='<Super>c'
-command='code'
+command='vscodium'
 name='Code'
-
-[plugins/power]
-sleep-inactive-ac-type='nothing'
-
-[plugins/xsettings]
-antialiasing='grayscale'
-hinting='slight'

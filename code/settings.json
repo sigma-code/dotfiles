@@ -33,7 +33,6 @@
     "editor.suggestSelection": "first",
     "gitlens.defaultDateShortFormat": "DD/MM/YYYY",
     "gitlens.defaultDateFormat": "DD/MM/YYYY, h:mma",
-    "maven.executable.preferMavenWrapper": true,
     "[typescript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
