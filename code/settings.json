@@ -4,9 +4,10 @@
     "editor.fontLigatures": true,
     "editor.renderWhitespace": "all",
     "editor.tabSize": 2,
-    "editor.fontSize": 14,
+    "editor.fontSize": 13,
     "terminal.explorerKind": "external",
     "terminal.integrated.fontFamily": "'MesloLGS NF'",
+    "terminal.integrated.fontSize": 12,
     "javascript.updateImportsOnFileMove.enabled": "always",
     "java.configuration.checkProjectSettingsExclusions": false,
     "java.configuration.runtimes": [
@@ -108,4 +109,5 @@
     ],
     "vim.debug.silent": false,
     "rust-client.engine": "rust-analyzer",
+    "redhat.telemetry.enabled": false,
 }

@@ -101,6 +101,14 @@ function setup_gnome {
   sudo systemctl enable rngd
 }
 
+# Set podman
+function setup_podman {
+  echo -e "  Setting up: Podman...\n"
+  sudo sysctl kernel.unprivileged_userns_clone=1
+  sudo touch /etc/subuid /etc/subgid
+  sudo usermod --add-subuids 100000-165535 --add-subgids 100000-165535 $USER
+}
+
 # Install prefered programs
 function init_system {
   install_pkgs
@@ -114,6 +122,7 @@ function init_system {
       setup_term
       setup_btop
       setup_code
+      setup_podman
       setup_gnome
     fi
   fi
