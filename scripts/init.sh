@@ -87,6 +87,8 @@ function setup_code {
   mkdir -p $HOME/.config/VSCodium/User
   ln -sf $dir/code/settings.json $HOME/.config/VSCodium/User/settings.json
   ln -sf $dir/code/keybindings.json $HOME/.config/VSCodium/User/keybindings.json
+  echo -e "installing extensions \n"
+  cat $dir/code/extensions | xargs vscodium --install-extension
 }
 
 # Set gnome settings
