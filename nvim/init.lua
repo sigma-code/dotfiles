@@ -43,6 +43,6 @@ require('s-telescope')
 --require('my-gitsigns')
 --require('my-comment')
 --require('my-autopairs')
---require('lsp')
+require('lsp')
 
 vim.cmd('colorscheme allure')

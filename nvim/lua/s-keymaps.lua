@@ -11,6 +11,7 @@ vim.api.nvim_set_keymap('n', '<Leader>p', ':"+p', {noremap = true, silent = true
 
 -- explorer
 --vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<Leader>e', ':Telescope file_browser<CR>', {noremap = true, silent = true})
 
 -- Comments
 --vim.api.nvim_set_keymap("n", "<leader>-", ":CommentToggle<CR>", {noremap = true, silent = true})
@@ -45,6 +46,7 @@ vim.api.nvim_set_keymap('n', '<leader>H', '<C-W>><CR>', {noremap = true, silent 
 vim.api.nvim_set_keymap('n', '<leader>L', '<C-W><<CR>', {noremap = true, silent = true})
 
 -- Telescope
+vim.api.nvim_set_keymap('n', '<S-C-p>', ':Telescope<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<C-p>', ':Telescope find_files<CR>', {noremap = true, silent = true})
 
 -- Use shift + alt + hjkl to resize windows

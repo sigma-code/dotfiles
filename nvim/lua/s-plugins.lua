@@ -21,6 +21,8 @@ packer.init {
 -- Plugin list
 return require("packer").startup(function(use)
   use { "wbthomason/packer.nvim" }
+
+  -- Git
   use { "tpope/vim-fugitive" }
 
   -- Telescope
@@ -29,6 +31,11 @@ return require("packer").startup(function(use)
   use { "nvim-telescope/telescope.nvim" }
   use { "nvim-telescope/telescope-fzy-native.nvim" }
 
+  -- LSP
+  use { "neovim/nvim-lspconfig" }
+  use { "williamboman/nvim-lsp-installer" }
+
+  -- Asthetics
   use { "vim-airline/vim-airline" }
   use { "vim-airline/vim-airline-themes" }
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
