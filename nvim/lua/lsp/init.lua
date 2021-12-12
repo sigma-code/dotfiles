@@ -29,3 +29,6 @@ for _, name in pairs(servers) do
 end
 
 require("lsp.lua-ls")
+require("lsp.json-ls")
+require("lsp.javascript-ls")
+require("lsp.rust-ls")
