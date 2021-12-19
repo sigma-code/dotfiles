@@ -6,9 +6,9 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
 end
 local _, packer = pcall(require, "packer")
 packer.init {
-  package_root = package_root,
-  compile_path = compile_path,
-  log = { level = log_level },
+  --package_root = package_root,
+  --compile_path = compile_path,
+  --log = { level = log_level },
   git = { clone_timeout = 300 },
   max_jobs = 50,
   display = {
@@ -34,6 +34,7 @@ return require("packer").startup(function(use)
   -- LSP
   use { "neovim/nvim-lspconfig" }
   use { "williamboman/nvim-lsp-installer" }
+  use { "mfussenegger/nvim-jdtls" }
 
   -- Auto Completion
   use { "hrsh7th/nvim-cmp" }

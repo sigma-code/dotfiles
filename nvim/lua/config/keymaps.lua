@@ -10,7 +10,6 @@ vim.api.nvim_set_keymap('n', '<Leader>y', ':"+y', {noremap = true, silent = true
 vim.api.nvim_set_keymap('n', '<Leader>p', ':"+p', {noremap = true, silent = true})
 
 -- explorer
---vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<Leader>e', ':Telescope file_browser<CR>', {noremap = true, silent = true})
 
 -- Comments
@@ -54,3 +53,12 @@ vim.api.nvim_set_keymap('n', '<S-M-j>', ':resize -2<CR>', {noremap = true, silen
 vim.api.nvim_set_keymap('n', '<S-M-k>', ':resize +2<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<S-M-h>', ':vertical resize -2<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<S-M-l>', ':vertical resize +2<CR>', {noremap = true, silent = true})
+
+-- Lsp
+vim.api.nvim_set_keymap("n", "<leader>k", ":lua vim.lsp.buf.hover()<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>f", ":lua vim.lsp.buf.formatting()<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>.", ":Telescope lsp_code_actions<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<F2>", ":lua vim.lsp.buf.rename()<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "gd", ":lua vim.lsp.buf.definition()<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "gD", ":lua vim.lsp.buf.declaration()<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "gr", ":lua vim.lsp.buf.references()<CR>", {noremap = true, silent = true})
