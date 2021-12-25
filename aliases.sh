@@ -21,6 +21,6 @@ alias top="btop"
 alias b="cd .."
 alias ipa="ip -c -br address show"
 alias code="vscodium"
-alias docker="podman"
-alias docker-compose="podman-compose"
+alias docker="sudo docker"
+alias docker-compose="sudo docker-compose"
 

@@ -6,17 +6,20 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
 end
 local _, packer = pcall(require, "packer")
 packer.init {
-  --package_root = package_root,
-  --compile_path = compile_path,
-  --log = { level = log_level },
-  git = { clone_timeout = 300 },
-  max_jobs = 50,
   display = {
     open_fn = function()
       return require("packer.util").float { border = "rounded" }
     end,
   },
 }
+
+-- Auto install plugins on file update
+vim.cmd [[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+  augroup end
+]]
 
 -- Plugin list
 return require("packer").startup(function(use)
@@ -45,6 +48,7 @@ return require("packer").startup(function(use)
   use { "L3MON4D3/LuaSnip" }
   use { "saadparwaiz1/cmp_luasnip" }
   use { "onsails/lspkind-nvim" }
+  use { "windwp/nvim-autopairs" }
 
   -- Asthetics
   use { "vim-airline/vim-airline" }

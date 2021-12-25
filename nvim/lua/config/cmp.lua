@@ -1,9 +1,14 @@
 local lspkind = require("lspkind")
 lspkind.init()
 
+require("nvim-autopairs").setup({
+  disable_filetype = { "TelescopePrompt", "vim" },
+})
+
 local cmp = require("cmp")
 
 cmp.setup {
+  preselect = "Item",
   mapping = {
     ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
     ['<Esc>'] = cmp.mapping({
@@ -35,3 +40,8 @@ cmp.setup {
     }
   }
 }
+
+--vim.cmd("set completeopt=noinsert")
+
+local cmp_autopairs = require("nvim-autopairs.completion.cmp")
+cmp.event:on( 'confirm_done', cmp_autopairs.on_confirm_done({  map_char = { tex = '' } }))

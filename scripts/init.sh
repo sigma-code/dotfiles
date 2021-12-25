@@ -111,6 +111,12 @@ function setup_podman {
   sudo usermod --add-subuids 100000-165535 --add-subgids 100000-165535 $USER
 }
 
+# Set docker
+function setup_docker {
+  echo -e "  Setting up: Docker...\n"
+  sudo systemctl enable --now docker
+}
+
 # Install prefered programs
 function init_system {
   install_pkgs
@@ -124,7 +130,7 @@ function init_system {
       setup_term
       setup_btop
       setup_code
-      setup_podman
+      setup_docker
       setup_gnome
     fi
   fi

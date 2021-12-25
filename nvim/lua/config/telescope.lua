@@ -1,8 +1,5 @@
 local actions = require('telescope.actions')
---local trouble = require("trouble.providers.telescope")
--- Global remapping
-------------------------------
--- '--color=never',
+
 require('telescope').setup {
     defaults = {
         find_command = {'rg', '--hidden', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case'},
@@ -38,9 +35,6 @@ require('telescope').setup {
         file_previewer = require'telescope.previewers'.vim_buffer_cat.new,
         grep_previewer = require'telescope.previewers'.vim_buffer_vimgrep.new,
         qflist_previewer = require'telescope.previewers'.vim_buffer_qflist.new,
-
-        -- Developer configurations: Not meant for general override
-        buffer_previewer_maker = require'telescope.previewers'.buffer_previewer_maker,
         mappings = {
             i = {
                 ["<C-c>"] = actions.close,
@@ -71,9 +65,20 @@ require('telescope').setup {
             }
         }
     },
+    pickers = {
+      find_files = {
+        theme = "dropdown",
+        previewer = false,
+      },
+      lsp_references = {
+        theme = "cursor",
+        layout_defaults = {
+          width = 0.5
+        }
+      }
+    },
     extensions = {
       fzy_native = {override_generic_sorter = false, override_file_sorter = true}
     }
 }
 
---require'telescope'.load_extension('ripgrep')

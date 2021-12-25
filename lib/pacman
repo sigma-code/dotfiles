@@ -3,6 +3,8 @@ btop
 celluloid
 cmake
 discord
+docker
+docker-compose
 dnsmasq
 ebtables
 firefox
@@ -26,10 +28,10 @@ ntfs-3g
 obs-studio
 pipewire
 pipewire-pulse
-podman
-podman-compose
+python-pip
 qgo
 qt5-wayland
+ripgrep
 rng-tools
 rustup
 steam
@@ -43,5 +45,3 @@ xclip
 xdg-desktop-portal
 xdg-desktop-portal-gtk
 zsh
-ripgrep
-meson
