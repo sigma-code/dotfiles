@@ -35,14 +35,14 @@ vim.api.nvim_set_keymap('v', '<A-k>', ':m .-2<CR>gv==gv', {noremap = true, silen
 vim.api.nvim_set_keymap('n', '<TAB>', ':bnext<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<S-TAB>', ':bprevious<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<C-s>', ':w<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<leader>h', ':wincmd h<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<leader>j', ':wincmd j<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<leader>k', ':wincmd k<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<leader>l', ':wincmd l<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<leader>J', '<C-W>+<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<leader>K', '<C-W>-<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<leader>H', '<C-W>><CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<leader>L', '<C-W><<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-h>', ':wincmd h<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-j>', ':wincmd j<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-k>', ':wincmd k<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-l>', ':wincmd l<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<S-C-j>', '<C-W>+<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<S-C-k>', '<C-W>-<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<S-C-h>', '<C-W>><CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<S-C-l>', '<C-W><<CR>', {noremap = true, silent = true})
 
 -- Telescope
 vim.api.nvim_set_keymap('n', '<S-C-p>', ':Telescope<CR>', {noremap = true, silent = true})
@@ -56,6 +56,7 @@ vim.api.nvim_set_keymap('n', '<S-M-l>', ':vertical resize +2<CR>', {noremap = tr
 
 -- Lsp
 vim.api.nvim_set_keymap("n", "<leader>k", ":lua vim.lsp.buf.hover()<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>l", ":lua vim.lsp.diagnostic.show_line_diagnostics({ border = 'rounded' })<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<leader>f", ":lua vim.lsp.buf.formatting()<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<leader>.", ":Telescope lsp_code_actions<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<F2>", ":lua vim.lsp.buf.rename()<CR>", {noremap = true, silent = true})

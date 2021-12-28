@@ -51,8 +51,9 @@ return require("packer").startup(function(use)
   use { "windwp/nvim-autopairs" }
 
   -- Asthetics
-  use { "vim-airline/vim-airline" }
-  use { "vim-airline/vim-airline-themes" }
+  --use { "vim-airline/vim-airline" }
+  --use { "vim-airline/vim-airline-themes" }
+  use { "nvim-lualine/lualine.nvim" }
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
   use { "rainglow/vim" }
   use { "christianchiarulli/nvcode-color-schemes.vim" }

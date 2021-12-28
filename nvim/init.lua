@@ -10,7 +10,7 @@ vim.o.expandtab = true -- set expandtab
 vim.o.number = true -- set number
 vim.o.relativenumber = true -- set relativenumber
 vim.o.nu = true -- set nu
---vim.o.signcolumn = "yes" -- set signcolumn=yes
+vim.o.signcolumn = "yes" -- set signcolumn=yes
 vim.o.updatetime = 250 -- set updatetime=250
 vim.o.mouse = "a" -- set mouse=a
 vim.o.shiftwidth = 2 -- set shiftwidth=2
@@ -29,18 +29,18 @@ vim.cmd('syntax on')
 vim.cmd('set noswapfile') -- set noswapfile
 vim.cmd('set nowrap') -- set nowrap
 
-vim.cmd('let g:airline_powerline_fonts = 1')
-vim.cmd('let g:airline_theme = "bubblegum"')
-vim.cmd('let g:airline#extensions#tabline#enabled = 1')
+--vim.cmd('let g:airline_powerline_fonts = 1')
+--vim.cmd('let g:airline_theme = "bubblegum"')
+--vim.cmd('let g:airline#extensions#tabline#enabled = 1')
 
 require('config.plugins')
 require('config.keymaps')
 require('config.treesitter')
 require('config.telescope')
 require('config.cmp')
+require('config.lualine')
 --require('my-gitsigns')
 --require('my-comment')
---require('my-autopairs')
 require('lsp')
 
 vim.cmd('colorscheme allure')
