@@ -50,6 +50,9 @@ return require("packer").startup(function(use)
   use { "onsails/lspkind-nvim" }
   use { "windwp/nvim-autopairs" }
 
+  -- Terminal
+  use { "akinsho/toggleterm.nvim" }
+
   -- Asthetics
   --use { "vim-airline/vim-airline" }
   --use { "vim-airline/vim-airline-themes" }
