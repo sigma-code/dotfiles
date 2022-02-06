@@ -56,9 +56,9 @@ vim.api.nvim_set_keymap('n', '<S-M-l>', ':vertical resize +2<CR>', {noremap = tr
 
 -- Lsp
 vim.api.nvim_set_keymap("n", "<leader>k", ":lua vim.lsp.buf.hover()<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<leader>l", ":lua vim.lsp.diagnostic.show_line_diagnostics({ border = 'rounded' })<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>l", ":lua vim.diagnostic.open_float({ border = 'rounded' })<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<leader>f", ":lua vim.lsp.buf.formatting()<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<leader>.", ":Telescope lsp_code_actions<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>i", ":Telescope lsp_code_actions<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<F2>", ":lua vim.lsp.buf.rename()<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "gd", ":lua vim.lsp.buf.definition()<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "gD", ":lua vim.lsp.buf.declaration()<CR>", {noremap = true, silent = true})

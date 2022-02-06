@@ -13,6 +13,8 @@ bindkey -e
 # The following lines were added by compinstall
 
 ########     My Config   ###########
+# PATH
+export PATH=$PATH+":$HOME/.local/bin/"
 # Imports
 source $HOME/.dotfiles/aliases.sh
 source $HOME/.dotfiles/env-vars.sh
