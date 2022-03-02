@@ -114,4 +114,6 @@
     "editor.minimap.enabled": false,
     "terminal.external.linuxExec": "kitty",
     "debug.terminal.clearBeforeReusing": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "typescript.updateImportsOnFileMove.enabled": "always",
 }
