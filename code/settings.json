@@ -116,4 +116,6 @@
     "debug.terminal.clearBeforeReusing": true,
     "security.workspace.trust.untrustedFiles": "open",
     "typescript.updateImportsOnFileMove.enabled": "always",
+    "window.menuBarVisibility": "toggle",
+    "workbench.sideBar.location": "right",
 }
