@@ -22,16 +22,24 @@ function aur {
 }
 
 # Install packages
-function install_pkgs {
+function install_pkgs_arch {
   echo -e "  Installing: Packages...\n"
-  pkgs=$(cat $dir/lib/pacman)
+  pkgs=$(cat $dir/lib/arch/pacman)
   sudo pacman -Syyu $pkgs
+}
+
+function install_pkgs_fedora {
+  echo -e "  Installing: Packages...\n"
+  lib=$dir/lib/fedora
+  bash $lib/reps.sh
+  xargs -a $lib/dnf sudo dnf install -y
+  xargs -a $lib/flathub flatpak install --nointeractive flathub
 }
 
 # Install AUR packages
 function install_aurpkgs {
   echo -e "  Installing: AUR Packages...\n"
-  aurpkgs=$(grep '^[*]' $dir/lib/aur | sed 's/*//g')
+  aurpkgs=$(grep '^[*]' $dir/lib/arch/aur | sed 's/*//g')
   for pkg in $aurpkgs; do
     aur "$pkg"
   done
@@ -88,7 +96,10 @@ function setup_code {
   ln -sf $dir/code/settings.json $HOME/.config/VSCodium/User/settings.json
   ln -sf $dir/code/keybindings.json $HOME/.config/VSCodium/User/keybindings.json
   echo -e "installing extensions \n"
-  cat $dir/code/extensions | xargs vscodium --install-extension
+  extensions=$($dir/code/extensions)
+  for pkg in $extensions; do
+    codium --install-extension "$pkg"
+  done
 }
 
 # Set gnome settings
@@ -118,21 +129,31 @@ function setup_docker {
 }
 
 # Install prefered programs
+#function init_system {
+# install_pkgs_arch
+# if [ $? -eq 0 ]; then
+#   sudo usermod -aG libvirt $USER
+#   git config --global pull.rebase true
+#   install_aurpkgs
+#   if [ $? -eq 0 ]; then
+#     setup_nvim
+#     setup_zsh
+#     setup_term
+#     setup_btop
+#     setup_code
+#     setup_docker
+#     setup_gnome
+#   fi
+# fi
+#}
 function init_system {
-  install_pkgs
+  git config --global pull.rebase true
+  install_pkgs_fedora
   if [ $? -eq 0 ]; then
-    sudo usermod -aG libvirt $USER
-    git config --global pull.rebase true
-    install_aurpkgs
-    if [ $? -eq 0 ]; then
-      setup_nvim
-      setup_zsh
-      setup_term
-      setup_btop
-      setup_code
-      setup_docker
-      setup_gnome
-    fi
+    setup_nvim
+    setup_zsh
+    setup_term
+    setup_code
   fi
 }
 init_system

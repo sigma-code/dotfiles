@@ -6,7 +6,7 @@
     "editor.tabSize": 2,
     "editor.fontSize": 13,
     "terminal.explorerKind": "integrated",
-    "terminal.integrated.fontFamily": "'MesloLGS NF'",
+    "terminal.integrated.fontFamily": "'Fira Code'",
     "terminal.integrated.persistentSessionReviveProcess": "never",
     "terminal.integrated.fontSize": 12,
     "javascript.updateImportsOnFileMove.enabled": "always",
