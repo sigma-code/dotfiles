@@ -29,5 +29,5 @@ name='Settings'
 
 [custom-keybindings/custom5]
 binding='<Super>c'
-command='vscodium'
+command='codium'
 name='Code'

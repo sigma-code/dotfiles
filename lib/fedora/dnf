@@ -10,6 +10,7 @@ java-11-openjdk
 java-latest-openjdk
 jq
 kitty
+kubectl
 neovim
 nmap
 ripgrep
