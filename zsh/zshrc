@@ -29,6 +29,8 @@ source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # FZF
 #source /usr/share/fzf/completion.zsh
 #source /usr/share/fzf/key-bindings.zsh
+# Kubectl
+#source <(kubectl completion zsh)
 
 # Completion
 zstyle ':completion:*' completer _expand _complete _ignored _approximate

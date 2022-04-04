@@ -1,16 +1,15 @@
 {
     "workbench.colorTheme": "Allure (rainglow)",
-    "editor.fontFamily": "'Fira Code'",
+    "editor.fontFamily": "'FiraCode NF'",
     "editor.fontLigatures": true,
     "editor.renderWhitespace": "all",
     "editor.tabSize": 2,
     "editor.fontSize": 13,
     "terminal.explorerKind": "integrated",
-    "terminal.integrated.fontFamily": "'Fira Code'",
+    "terminal.integrated.fontFamily": "'FiraCode NF'",
     "terminal.integrated.persistentSessionReviveProcess": "never",
     "terminal.integrated.fontSize": 12,
     "javascript.updateImportsOnFileMove.enabled": "always",
-    "java.configuration.checkProjectSettingsExclusions": false,
     "java.configuration.runtimes": [
         {
             "name": "JavaSE-1.8",
@@ -109,7 +108,6 @@
         },
     ],
     "vim.debug.silent": false,
-    "rust-client.engine": "rust-analyzer",
     "redhat.telemetry.enabled": false,
     "editor.minimap.enabled": false,
     "terminal.external.linuxExec": "kitty",
