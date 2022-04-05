@@ -40,6 +40,16 @@ return require("packer").startup(function(use)
   use { "williamboman/nvim-lsp-installer" }
   use { "mfussenegger/nvim-jdtls" }
 
+  -- Auto Comments
+  use {
+    "numToStr/Comment.nvim",
+    event = { "BufRead", "BufNewFile" }
+  }
+  use {
+    "JoosepAlviste/nvim-ts-context-commentstring",
+    after = "nvim-treesitter"
+  }
+
   -- Auto Completion
   use { "hrsh7th/nvim-cmp" }
   use { "hrsh7th/cmp-buffer" }
