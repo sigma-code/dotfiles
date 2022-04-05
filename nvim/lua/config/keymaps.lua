@@ -48,6 +48,10 @@ map('n', '<S-C-l>', '<C-W><<CR>', opts)
 -- Telescope
 map('n', '<S-C-p>', ':Telescope<CR>', opts)
 map('n', '<C-p>', ':Telescope find_files<CR>', opts)
+map("n", "<leader>gt", "<cmd>Telescope git_status<CR>", opts)
+map("n", "<leader>gb", "<cmd>Telescope git_branches<CR>", opts)
+map("n", "<leader>gc", "<cmd>Telescope git_commits<CR>", opts)
+map("n", "<leader>sb", "<cmd>Telescope git_branches<CR>", opts)
 
 -- Use shift + alt + hjkl to resize windows
 map('n', '<S-M-j>', ':resize -2<CR>', opts)
@@ -65,4 +69,15 @@ map("n", "gd", ":lua vim.lsp.buf.definition()<CR>", opts)
 map("n", "gD", ":lua vim.lsp.buf.declaration()<CR>", opts)
 map("n", "gr", ":Telescope lsp_references theme=cursor<CR>", opts)
 --map("n", "gr", ":lua vim.lsp.buf.references()<CR>", opts)
+
+-- Git
+map("n", "<leader>gj", "<cmd>lua require 'gitsigns'.next_hunk()<cr>", opts)
+map("n", "<leader>gk", "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", opts)
+map("n", "<leader>gl", "<cmd>lua require 'gitsigns'.blame_line()<cr>", opts)
+map("n", "<leader>gp", "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", opts)
+map("n", "<leader>gh", "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", opts)
+map("n", "<leader>gr", "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", opts)
+map("n", "<leader>gs", "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", opts)
+map("n", "<leader>gu", "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>", opts)
+map("n", "<leader>gd", "<cmd>Gitsigns diffthis HEAD<cr>", opts)
 

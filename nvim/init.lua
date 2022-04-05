@@ -39,7 +39,7 @@ require('config.cmp')
 require('config.lualine')
 require('config.toggleterm')
 require('config.comment')
---require('my-gitsigns')
+require('config.gitsigns')
 require('lsp')
 
 vim.cmd('colorscheme allure')
