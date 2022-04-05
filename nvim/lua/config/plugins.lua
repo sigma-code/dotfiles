@@ -26,7 +26,6 @@ return require("packer").startup(function(use)
   use { "wbthomason/packer.nvim" }
 
   -- Git
-  -- use { "tpope/vim-fugitive" }
   use { "lewis6991/gitsigns.nvim" }
 
   -- Telescope
