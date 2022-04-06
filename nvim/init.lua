@@ -42,4 +42,12 @@ require('config.comment')
 require('config.gitsigns')
 require('lsp')
 
+-- jdtls
+vim.cmd [[
+  augroup jdtls_lsp
+    autocmd!
+    autocmd FileType java lua require'lsp.java-ls'.setup()
+  augroup end
+]]
+
 vim.cmd('colorscheme allure')

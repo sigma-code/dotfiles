@@ -65,7 +65,6 @@ end
 
 require("lsp.lua-ls")
 require("lsp.json-ls")
-require("lsp.java-ls")
 require("lsp.javascript-ls")
 require("lsp.rust-ls")
 require("lsp.vue-ls")
