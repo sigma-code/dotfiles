@@ -50,4 +50,5 @@ vim.cmd [[
   augroup end
 ]]
 
-vim.cmd('colorscheme allure')
+vim.cmd('colorscheme absent')
+

@@ -4,7 +4,7 @@ if vim.fn.exists "syntax_on" then
 end
 vim.o.background = "dark"
 vim.o.termguicolors = true
-vim.g.colors_name = "neoallure"
+vim.g.colors_name = "sallure"
 
 local modules = {
   "base",
