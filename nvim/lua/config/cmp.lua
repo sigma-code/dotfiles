@@ -11,6 +11,8 @@ cmp.setup {
   preselect = "Item",
   mapping = {
     ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
+    ['<Down>'] = cmp.mapping(cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }), {'i'}),
+    ['<Up>'] = cmp.mapping(cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }), {'i'}),
     ['<Esc>'] = cmp.mapping({
       i = cmp.mapping.abort(),
       c = cmp.mapping.close(),
