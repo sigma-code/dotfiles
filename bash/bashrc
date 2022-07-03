@@ -13,15 +13,14 @@
 # If not running interactively, don't do anything.
 [[ $- != *i* ]] && return
 
-# Aliases
-source $HOME/.dotfiles/aliases.sh
-# Environment variables
-source $HOME/.dotfiles/env-vars.sh
-# Custom functions
-source $HOME/.dotfiles/scripts/base.sh
+# Import git utils
+for file in $HOME/.gitutils/* ; do
+  source $file
+done
 
-PS1="\[$(tformat lt-gray)\]\u\[$(tformat white bold)\] @ \[$(tformat gray)\]\h [\W]"
-PS1+="\[\$(git_color)\]\$(git_branch)\n"
-PS1+="\[$(tformat lt-gray)\] └─\[$(tformat yellow bold)\]λ\[$(tput sgr0)\]: "
+# PS1="\[$(tformat lt-gray)\]\u\[$(tformat white bold)\] @ \[$(tformat gray)\]\h [\W]"
+# PS1+="\[\$(git_color)\]\$(git_branch)\n"
+# PS1+="\[$(tformat lt-gray)\] └─\[$(tformat yellow bold)\]λ\[$(tput sgr0)\]: "
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[33m\]$(__git_ps1 " (%s)")\[\033[00;39m\]\$ '
 
 export PS1
