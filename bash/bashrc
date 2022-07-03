@@ -13,6 +13,11 @@
 # If not running interactively, don't do anything.
 [[ $- != *i* ]] && return
 
+# Import aliases
+if [ -f ~/.bash_aliases ]; then
+  . ~/.bash_aliases
+fi
+
 # Import git utils
 for file in $HOME/.gitutils/* ; do
   source $file
