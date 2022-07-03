@@ -12,6 +12,7 @@ map('v', '<C-c>', '"+y', opts)
 
 -- explorer
 map('n', '<Leader>e', ':Telescope file_browser<CR>', opts)
+map('n', '<C-f>', ':Telescope live_grep<CR>', opts)
 
 -- Comments
 map("n", "<leader>/", "<cmd>lua require('Comment.api').toggle_current_linewise()<cr>", opts)
@@ -81,4 +82,3 @@ map("n", "<leader>gr", "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", opts)
 map("n", "<leader>gs", "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", opts)
 map("n", "<leader>gu", "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>", opts)
 map("n", "<leader>gd", "<cmd>Gitsigns diffthis HEAD<cr>", opts)
-
