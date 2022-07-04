@@ -72,6 +72,10 @@ map("n", "gD", ":lua vim.lsp.buf.declaration()<CR>", opts)
 map("n", "gr", ":Telescope lsp_references theme=cursor<CR>", opts)
 --map("n", "gr", ":lua vim.lsp.buf.references()<CR>", opts)
 
+-- DAP
+map("n", "<leader>db", ":lua require'dap'.toggle_breakpoint()<CR>", opts)
+map("n", "<leader>ds", ":lua require'dap'.continue()<CR>", opts)
+
 -- Git
 map("n", "<leader>gj", "<cmd>lua require 'gitsigns'.next_hunk()<cr>", opts)
 map("n", "<leader>gk", "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", opts)

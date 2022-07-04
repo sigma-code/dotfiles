@@ -40,6 +40,10 @@ return require("packer").startup(function(use)
   use { "williamboman/nvim-lsp-installer" }
   use { "mfussenegger/nvim-jdtls" }
 
+  -- DAP
+  use { "mfussenegger/nvim-dap" }
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+
   -- Auto Comments
   use {
     "numToStr/Comment.nvim",
