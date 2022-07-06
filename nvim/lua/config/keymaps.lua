@@ -10,6 +10,9 @@ map('n', '<Leader>h', ':noh<CR>', opts)
 -- System clipboard
 map('v', '<C-c>', '"+y', opts)
 
+-- Esc alt
+map('i', '<leader><Tab>', '<Esc>', opts)
+
 -- explorer
 map('n', '<Leader>e', ':Telescope file_browser<CR>', opts)
 map('n', '<C-f>', ':Telescope live_grep<CR>', opts)
