@@ -50,5 +50,6 @@ vim.cmd [[
   augroup end
 ]]
 
-vim.cmd('colorscheme allure')
+-- vim.cmd('colorscheme allure')
+vim.cmd('colorscheme lunar')
 
