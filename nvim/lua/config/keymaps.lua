@@ -11,7 +11,7 @@ map('n', '<Leader>h', ':noh<CR>', opts)
 map('v', '<C-c>', '"+y', opts)
 
 -- Esc alt
-map('i', '<leader><Tab>', '<Esc>', opts)
+-- map('i', '<leader><Tab>', '<Esc>', opts)
 
 -- explorer
 map('n', '<Leader>e', ':Telescope file_browser<CR>', opts)
