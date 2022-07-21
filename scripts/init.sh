@@ -134,6 +134,7 @@ function setup_docker {
 # if [ $? -eq 0 ]; then
 #   sudo usermod -aG libvirt $USER
 #   git config --global pull.rebase true
+#   git config --global rebase.autoStash true
 #   install_aurpkgs
 #   if [ $? -eq 0 ]; then
 #     setup_nvim
