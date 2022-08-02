@@ -25,6 +25,7 @@ set.tabstop = 2 -- set tabstop=2
 set.wildmenu = true -- set wildmenu
 set.hidden = true -- set hidden
 set.splitbelow = true -- set splitbelow
+set.background = 000000
 
 vim.cmd('set termguicolors')
 vim.cmd('syntax on')
@@ -50,6 +51,15 @@ vim.cmd [[
   augroup end
 ]]
 
+-- colorscheme override
+vim.cmd [[
+  augroup colorscheme_override
+    autocmd!
+    autocmd ColorScheme * highlight Normal guibg=000000
+  augroup end
+]]
+
 -- vim.cmd('colorscheme allure')
-vim.cmd('colorscheme lunar')
+-- vim.cmd('colorscheme lunar')
+vim.cmd('colorscheme nord')
 

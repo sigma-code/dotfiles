@@ -21,7 +21,7 @@ require("toggleterm").setup{
     -- the 'curved' border is a custom border type
     -- not natively supported but implemented in this plugin.
     border = 'curved',
-    winblend = 3,
+    winblend = 0,
     highlights = {
       border = "Normal",
       background = "Normal",
