@@ -10,5 +10,5 @@ require("lspconfig").tsserver.setup {
   init_options = {
     hostInfo = "neovim"
   },
-  root_dir = root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git")
+  root_dir = root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git", "index.js")
 }
