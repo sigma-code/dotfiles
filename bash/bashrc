@@ -23,6 +23,17 @@ for file in $HOME/.gitutils/* ; do
   source $file
 done
 
+# xdg runtime dir for wsl
+if [[ -z "$XDG_RUNTIME_DIR" ]]; then
+  export XDG_RUNTIME_DIR=/run/user/$UID
+  if [[ ! -d "$XDG_RUNTIME_DIR" ]]; then
+    export XDG_RUNTIME_DIR=/tmp/$USER-runtime
+    if [[ ! -d "$XDG_RUNTIME_DIR" ]]; then
+      mkdir -m 0700 "$XDG_RUNTIME_DIR"
+    fi
+  fi
+fi
+
 # PS1="\[$(tformat lt-gray)\]\u\[$(tformat white bold)\] @ \[$(tformat gray)\]\h [\W]"
 # PS1+="\[\$(git_color)\]\$(git_branch)\n"
 # PS1+="\[$(tformat lt-gray)\] └─\[$(tformat yellow bold)\]λ\[$(tput sgr0)\]: "
