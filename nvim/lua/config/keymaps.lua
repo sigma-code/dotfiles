@@ -18,8 +18,8 @@ map('n', '<Leader>e', ':Telescope file_browser<CR>', opts)
 map('n', '<C-f>', ':Telescope live_grep<CR>', opts)
 
 -- Comments
-map("n", "<leader>/", "<cmd>lua require('Comment.api').toggle_current_linewise()<cr>", opts)
-map("v", "<leader>/", "<esc><cmd>lua require('Comment.api').toggle_linewise_op(vim.fn.visualmode())<CR>", opts)
+map ("n", "<leader>/", "<Plug>(comment_toggle_linewise_current)", opts)
+map("v", "<leader>/", "<Plug>(comment_toggle_linewise_visual)", opts)
 
 -- close buffer
 map("n", "<leader>o", ":setl bufhidden=delete <bar> :bp<CR>", opts)

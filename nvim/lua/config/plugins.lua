@@ -59,7 +59,10 @@ return require("packer").startup(function(use)
   use { "L3MON4D3/LuaSnip" }
   use { "saadparwaiz1/cmp_luasnip" }
   use { "onsails/lspkind-nvim" }
-  use { "windwp/nvim-autopairs" }
+  use {
+    "windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+  }
 
   -- Terminal
   use { "akinsho/toggleterm.nvim" }
