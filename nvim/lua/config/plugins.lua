@@ -69,7 +69,7 @@ return require("packer").startup(function(use)
   --use { "vim-airline/vim-airline-themes" }
   use { "nvim-lualine/lualine.nvim" }
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
-  use { "rainglow/vim" }
+  -- use { "rainglow/vim" }
   use { "christianchiarulli/nvcode-color-schemes.vim" }
   use { "kyazdani42/nvim-web-devicons" }
 end)

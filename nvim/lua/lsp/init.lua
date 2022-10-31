@@ -68,4 +68,5 @@ require("lsp.json-ls")
 require("lsp.javascript-ls")
 require("lsp.rust-ls")
 require("lsp.vue-ls")
+require("lsp.kotlin-ls")
 

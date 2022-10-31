@@ -5,6 +5,7 @@ CACHE_PATH = vim.fn.stdpath('cache')
 
 local set = vim.o
 
+
 set.autoread = true -- set autoread
 set.encoding = "UTF-8" -- set encoding=UTF-8
 set.fileencoding = "UTF-8" -- set fileencoding=UTF-8
@@ -61,5 +62,6 @@ vim.cmd [[
 
 -- vim.cmd('colorscheme allure')
 -- vim.cmd('colorscheme lunar')
-vim.cmd('colorscheme nord')
+-- vim.cmd('colorscheme nord')
+vim.cmd('colorscheme dracula')
 
