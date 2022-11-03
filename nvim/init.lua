@@ -53,15 +53,16 @@ vim.cmd [[
 ]]
 
 -- colorscheme override
-vim.cmd [[
-  augroup colorscheme_override
-    autocmd!
-    autocmd ColorScheme * highlight Normal guibg=000000
-  augroup end
-]]
+-- vim.cmd [[
+--   augroup colorscheme_override
+--     autocmd!
+--     autocmd ColorScheme * highlight Normal guibg=000000
+--   augroup end
+-- ]]
 
 -- vim.cmd('colorscheme allure')
 -- vim.cmd('colorscheme lunar')
 -- vim.cmd('colorscheme nord')
-vim.cmd('colorscheme dracula')
+-- vim.cmd('colorscheme dracula')
+vim.cmd('colorscheme yitzchok')
 

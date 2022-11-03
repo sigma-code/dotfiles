@@ -13,15 +13,15 @@
 # If not running interactively, don't do anything.
 [[ $- != *i* ]] && return
 
-# Import aliases
-if [ -f ~/.bash_aliases ]; then
-  . ~/.bash_aliases
-fi
-
 # Import git utils
 for file in $HOME/.gitutils/* ; do
   source $file
 done
+
+# Import aliases
+if [ -f ~/.bash_aliases ]; then
+  . ~/.bash_aliases
+fi
 
 # xdg runtime dir for wsl
 if [[ -z "$XDG_RUNTIME_DIR" ]]; then
