@@ -4,7 +4,7 @@ alias ls="ls --color"
 alias lt="lsd --group-dirs first --tree"
 alias la="l -A"
 alias lss="l --total-size"
-alias fd="fdfind"
+#alias fd="fdfind"
 alias p="echo $PWD"
 alias ping="ping -c 5"
 alias q="exit"
@@ -25,18 +25,18 @@ alias kmk="km -k"
 alias v="nvim"
 alias vf="fd -t file -H -E node_modules -E .git -E dist | fzf | xargs nvim"
 alias g="git"
-__git_complete g __git_main
+#__git_complete g __git_main
 alias gc="g commit -m"
 alias gcl="g clone"
 alias gch="g checkout"
-__git_complete gch _git_checkout
+#__git_complete gch _git_checkout
 alias gsw="g switch"
-__git_complete gsw _git_switch
+#__git_complete gsw _git_switch
 alias gst="g status"
 alias gps="g push"
-__git_complete gps _git_push
+#__git_complete gps _git_push
 alias gpl="g pull"
-__git_complete gpl _git_pull
+#__git_complete gpl _git_pull
 alias ga="g add"
 alias gca="ga . && gc"
 alias gb="g branch"
@@ -48,9 +48,9 @@ alias ggr="g config --get remote.origin.url"
 alias gclr='g remote prune origin && g branch | grep -v -E "(develop|master|main)" | xargs git branch -d'
 alias gd="g diff --name-only"
 alias gda="g diff"
-__git_complete gda _git_diff
+#__git_complete gda _git_diff
 alias grb="g rebase"
-__git_complete grb _git_rebase
+#__git_complete grb _git_rebase
 alias grst="g reset"
 alias n="npm"
 alias ni="n i"

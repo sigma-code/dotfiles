@@ -33,7 +33,7 @@ function install_pkgs_fedora {
   lib=$dir/lib/fedora
   bash $lib/reps.sh
   xargs -a $lib/dnf sudo dnf install -y
-  xargs -a $lib/flathub flatpak install --nointeractive flathub
+  # xargs -a $lib/flathub flatpak install --nointeractive flathub
 }
 
 # Install AUR packages

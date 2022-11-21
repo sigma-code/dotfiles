@@ -17,6 +17,7 @@ bindkey -e
 export PATH="$HOME/.local/bin:$PATH"
 . "$HOME/.cargo/env"
 # Imports
+zstyle ':completion:*:*:git:*' script ~/.dotfiles/bash/gitutils/git-completion.bash
 source $HOME/.dotfiles/aliases.sh
 source $HOME/.dotfiles/env-vars.sh
 source $HOME/.dotfiles/scripts/base.sh
@@ -84,3 +85,10 @@ eval "$(direnv hook zsh)"
 # Highlighting
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=240"
 
+
+# bun completions
+[ -s "/home/pablo/.bun/_bun" ] && source "/home/pablo/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
