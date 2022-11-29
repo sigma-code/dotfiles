@@ -82,5 +82,6 @@ alias dr="d run"
 alias db="d build"
 alias dl="d ps"
 alias jdk="sudo update-alternatives --config java"
-alias update="sudo apt update -y && sudo apt upgrade -y"
+# alias update="sudo apt update -y && sudo apt upgrade -y"
+alias svm="sys start libvirtd && sys start virtlogd"
 
