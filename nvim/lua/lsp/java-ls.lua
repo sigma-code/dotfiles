@@ -2,9 +2,9 @@ local server_path = LSP_SERVERS_PATH .. '/jdtls'
 -- local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
 local workspace = os.getenv('HOME') .. '/lab/.java_workspace'
 local jdk_base = '/usr/lib/jvm'
-local jdk_latest = '/java-17-openjdk-amd64'
-local jdk_11 = '/java-11-openjdk-amd64'
-local jdk_8 = '/java-1.8.0-openjdk-1.8.0.322.b06-6.fc35.x86_64'
+local jdk_17 = '/java-17-openjdk-17.0.5.0.8-1.fc37.x86_64'
+local jdk_11 = '/java-11-openjdk-11.0.17.0.8-1.fc37.x86_64'
+local jdk_8 = '/java-1.8.0-openjdk-1.8.0.352.b08-2.fc37.x86_64'
 local M = {}
 
 function M.setup()
@@ -37,7 +37,7 @@ function M.setup()
             },
             {
               name = "JavaSE-17",
-              path = jdk_base .. jdk_latest
+              path = jdk_base .. jdk_17
             }
           }
         }

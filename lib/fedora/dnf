@@ -5,9 +5,9 @@ lsd
 util-linux-user
 cmake
 codium
-java-1.8.0-openjdk
-java-11-openjdk
-java-latest-openjdk
+java-1.8.0-openjdk-devel
+java-11-openjdk-devel
+java-latest-openjdk-devel
 jq
 kitty
 kubectl
@@ -19,4 +19,6 @@ tor
 fira-code-fonts
 xclip
 zsh
+gcc-c++
+direnv
 

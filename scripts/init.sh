@@ -34,6 +34,7 @@ function install_pkgs_fedora {
   bash $lib/reps.sh
   xargs -a $lib/dnf sudo dnf install -y
   # xargs -a $lib/flathub flatpak install --nointeractive flathub
+  # TODO: add rust, nvm, bun
 }
 
 # Install AUR packages
