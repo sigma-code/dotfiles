@@ -21,4 +21,5 @@ xclip
 zsh
 gcc-c++
 direnv
+fd-find
 
