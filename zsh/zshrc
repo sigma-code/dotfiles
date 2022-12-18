@@ -89,8 +89,14 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=240"
 
 
 # bun completions
-[ -s "/home/pablo/.bun/_bun" ] && source "/home/pablo/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f "$HOME/.local/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/.local/google-cloud-sdk/path.zsh.inc"; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f "$HOME/.local/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/.local/google-cloud-sdk/completion.zsh.inc"; fi
