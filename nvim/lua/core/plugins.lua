@@ -40,6 +40,13 @@ return require("packer").startup(function(use)
   use { "williamboman/nvim-lsp-installer" }
   use { "mfussenegger/nvim-jdtls" }
 
+  -- DAP
+  use{ "mfussenegger/nvim-dap" }
+  use{ "rcarriga/nvim-dap-ui",
+    requires = {"mfussenegger/nvim-dap"}
+  }
+  use{ "nvim-telescope/telescope-dap.nvim" }
+
   -- Auto Comments
   use {
     "numToStr/Comment.nvim",
@@ -71,11 +78,15 @@ return require("packer").startup(function(use)
   use { "akinsho/toggleterm.nvim" }
 
   -- Asthetics
+  use { "kyazdani42/nvim-web-devicons" }
+  use { "EdenEast/nightfox.nvim" }
+  use { "sainnhe/everforest" }
+  use { "sainnhe/sonokai" }
+  use { "NLKNguyen/papercolor-theme" }
   --use { "vim-airline/vim-airline" }
   --use { "vim-airline/vim-airline-themes" }
   use { "nvim-lualine/lualine.nvim" }
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
   use { "rainglow/vim" }
-  use { "christianchiarulli/nvcode-color-schemes.vim" }
-  use { "kyazdani42/nvim-web-devicons" }
+  -- use { "christianchiarulli/nvcode-color-schemes.vim" }
 end)

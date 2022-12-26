@@ -33,16 +33,8 @@ vim.cmd('syntax on')
 vim.cmd('set noswapfile') -- set noswapfile
 vim.cmd('set nowrap') -- set nowrap
 
-require('config.plugins')
-require('config.keymaps')
-require('config.treesitter')
-require('config.telescope')
-require('config.cmp')
-require('config.lualine')
-require('config.toggleterm')
-require('config.comment')
-require('config.gitsigns')
-require('lsp')
+require('core')
+require('dev')
 
 -- jdtls
 vim.cmd [[
@@ -64,5 +56,6 @@ vim.cmd [[
 -- vim.cmd('colorscheme lunar')
 -- vim.cmd('colorscheme nord')
 -- vim.cmd('colorscheme dracula')
-vim.cmd('colorscheme yitzchok')
+-- vim.cmd('colorscheme yitzchok')
+vim.cmd('colorscheme nightfox')
 

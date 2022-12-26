@@ -1,4 +1,7 @@
 local lsp_installer = require("nvim-lsp-installer")
+local dap, dapui = require("dap"), require("dapui")
+
+-- LSP
 LSP_SERVERS_PATH = DATA_PATH .. "/lsp_servers"
 
 lsp_installer.settings({
@@ -63,10 +66,22 @@ for _, name in pairs(servers) do
   end
 end
 
-require("lsp.lua-ls")
-require("lsp.json-ls")
-require("lsp.javascript-ls")
-require("lsp.rust-ls")
-require("lsp.vue-ls")
-require("lsp.kotlin-ls")
+-- DAP
+dapui.setup()
+dap.listeners.after.event_initialized["dapui_config"] = function()
+  dapui.open()
+end
+dap.listeners.before.event_terminated["dapui_config"] = function()
+  dapui.close()
+end
+dap.listeners.before.event_exited["dapui_config"] = function()
+  dapui.close()
+end
+
+require("dev.lua-ls")
+require("dev.json-ls")
+require("dev.javascript-ls")
+require("dev.rust-ls")
+require("dev.vue-ls")
+require("dev.kotlin-ls")
 
