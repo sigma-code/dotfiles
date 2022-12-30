@@ -5,7 +5,6 @@ CACHE_PATH = vim.fn.stdpath('cache')
 
 local set = vim.o
 
-
 set.autoread = true -- set autoread
 set.encoding = "UTF-8" -- set encoding=UTF-8
 set.fileencoding = "UTF-8" -- set fileencoding=UTF-8
@@ -40,8 +39,8 @@ require('dev')
 vim.cmd [[
   augroup jdtls_lsp
     autocmd!
-    autocmd FileType java lua require'lsp.java-ls'.setup()
-  augroup end
+    autocmd FileType java lua require'dev.java'.setup()
+  augroup END
 ]]
 
 -- colorscheme override

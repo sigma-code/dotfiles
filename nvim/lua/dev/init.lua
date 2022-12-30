@@ -78,10 +78,10 @@ dap.listeners.before.event_exited["dapui_config"] = function()
   dapui.close()
 end
 
-require("dev.lua-ls")
-require("dev.json-ls")
-require("dev.javascript-ls")
-require("dev.rust-ls")
-require("dev.vue-ls")
-require("dev.kotlin-ls")
+require("dev.lua")
+require("dev.json")
+require("dev.javascript")
+require("dev.rust")
+require("dev.vue")
+require("dev.kotlin")
 

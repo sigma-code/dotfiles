@@ -8,7 +8,11 @@ local jdk_8 = '/java-1.8.0-openjdk-1.8.0.352.b08-2.fc37.x86_64'
 local M = {}
 
 function M.setup()
-  
+  local on_attach = function(client, bufnr)
+    require('jdtls').setup_dap()
+    require('jdtls.dap').setup_dap_main_class_configs()
+  end
+
   local config = {
     cmd = {
       'java',
@@ -44,8 +48,11 @@ function M.setup()
       }
     },
     init_options = {
-      bundles = {}
+      bundles = {
+        vim.fn.glob(os.getenv('HOME') .. '/.local/dev/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar', 1)
+      }
     },
+    on_attach = on_attach
   }
 
   require('jdtls').start_or_attach(config)
