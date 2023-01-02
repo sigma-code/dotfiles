@@ -56,5 +56,6 @@ vim.cmd [[
 -- vim.cmd('colorscheme nord')
 -- vim.cmd('colorscheme dracula')
 -- vim.cmd('colorscheme yitzchok')
-vim.cmd('colorscheme nightfox')
+-- vim.cmd('colorscheme nightfox')
+vim.cmd('colorscheme ayu-mirage')
 

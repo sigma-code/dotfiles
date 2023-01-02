@@ -80,6 +80,7 @@ return require("packer").startup(function(use)
   -- Asthetics
   use { "kyazdani42/nvim-web-devicons" }
   use { "EdenEast/nightfox.nvim" }
+  use { "Shatur/neovim-ayu" }
   use { "sainnhe/everforest" }
   use { "sainnhe/sonokai" }
   use { "NLKNguyen/papercolor-theme" }
