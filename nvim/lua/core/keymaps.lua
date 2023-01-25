@@ -71,10 +71,9 @@ map("n", "<leader>f", ":lua vim.lsp.buf.format({ async = true })<CR>", opts)
 -- map("n", "<leader>i", ":Telescope lsp_code_actions<CR>", opts)
 map("n", "<leader>i", ":lua vim.lsp.buf.code_action()<CR>", opts)
 map("n", "<F2>", ":lua vim.lsp.buf.rename()<CR>", opts)
-map("n", "gd", ":lua vim.lsp.buf.definition()<CR>", opts)
+map("n", "gd", ":Telescope lsp_definitions<CR>", opts)
 map("n", "gD", ":lua vim.lsp.buf.declaration()<CR>", opts)
-map("n", "gr", ":Telescope lsp_references theme=cursor<CR>", opts)
---map("n", "gr", ":lua vim.lsp.buf.references()<CR>", opts)
+map("n", "gr", ":Telescope lsp_references<CR>", opts)
 
 -- DAP
 map("n", "<F5>", ":lua require'dap'.continue()<CR>", opts)

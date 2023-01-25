@@ -6,7 +6,7 @@ local root_pattern = require("lspconfig/util").root_pattern
 require("lspconfig").volar.setup {
   cmd = {"node", vue_server_path, "--stdio"},
   filetypes = {'vue'},
-  root_dir = root_pattern("package.json","vue.config.js"),
+  root_dir = root_pattern("package.json","vue.config.js", "vite.config.ts"),
   init_options = {
     hostInfo = "neovim",
     typescript = {

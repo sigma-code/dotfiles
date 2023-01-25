@@ -25,6 +25,7 @@ function M.setup()
       '--add-modules=ALL-SYSTEM',
       '--add-opens', 'java.base/java.util=ALL-UNNAMED',
       '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
+      '-javaagent:' .. server_path .. '/lombok.jar',
       '-jar', server_path .. "/plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar",
       '-configuration', server_path .. "/config_linux",
       '-data', workspace
