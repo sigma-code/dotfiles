@@ -32,7 +32,24 @@ vim.cmd('syntax on')
 vim.cmd('set noswapfile') -- set noswapfile
 vim.cmd('set nowrap') -- set nowrap
 
-require('core')
+require('keybindings')
+
+-- plugin management
+local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    'git',
+    'clone',
+    '--filter=blob:none',
+    'https://github.com/folke/lazy.nvim.git',
+    '--branch=stable', -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+require('lazy').setup('plugins')
+-- plugin management
+
 require('dev')
 
 -- jdtls
@@ -43,7 +60,7 @@ vim.cmd [[
   augroup END
 ]]
 
--- colorscheme override
+-- colorscheme override transparent
 -- vim.cmd [[
 --   augroup colorscheme_override
 --     autocmd!
