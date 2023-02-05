@@ -1,5 +1,5 @@
-return {
-  'neovim/nvim-lspconfig',
-  'williamboman/nvim-lsp-installer',
-  'mfussenegger/nvim-jdtls',
-}
+-- return {
+  -- 'neovim/nvim-lspconfig',
+  -- 'williamboman/nvim-lsp-installer',
+  -- 'mfussenegger/nvim-jdtls',
+-- }

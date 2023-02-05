@@ -50,7 +50,7 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup('plugins')
 -- plugin management
 
-require('dev')
+-- require('dev')
 
 -- jdtls
 vim.cmd [[
