@@ -50,16 +50,6 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup('plugins')
 -- plugin management
 
--- require('dev')
-
--- jdtls
-vim.cmd [[
-  augroup jdtls_lsp
-    autocmd!
-    autocmd FileType java lua require'dev.java'.setup()
-  augroup END
-]]
-
 -- colorscheme override transparent
 -- vim.cmd [[
 --   augroup colorscheme_override

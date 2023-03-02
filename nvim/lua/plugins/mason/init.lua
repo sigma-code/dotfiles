@@ -1,9 +1,9 @@
 -- LSP
 local signs = {
   { name = "DiagnosticSignError", text = "" },
-  { name = "DiagnosticSignWarn", text = "" },
-  { name = "DiagnosticSignHint", text = "" },
-  { name = "DiagnosticSignInfo", text = "" },
+  { name = "DiagnosticSignWarn",  text = "" },
+  { name = "DiagnosticSignHint",  text = "" },
+  { name = "DiagnosticSignInfo",  text = "" },
 }
 
 for _, sign in ipairs(signs) do
@@ -27,28 +27,24 @@ vim.diagnostic.config({
 })
 
 -- Languages
+--[[ local lsp_servers_path = vim.fn.stdpath('data') .. "/mason/packages" ]]
+local cache_path = os.getenv('HOME') .. '.cache/jdtls'
 local servers = {
-  sumneko_lua = {
-    Lua = {
-      runtime = {
-        -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-        version = 'LuaJIT',
-        -- Setup your lua path
-        path = vim.split(package.path, ';')
-      },
-      diagnostics = {
-        -- Get the language server to recognize the `vim` global
-        globals = { 'vim' }
-      },
-      workspace = { checkThirdParty = false },
-      telemetry = { enable = false },
-    }
+  sumneko_lua = require('plugins.mason.lua'),
+  --[[ jdtls = require('plugins.mason.java'), ]]
+  jdtls = {
+    cmd = {
+      'jdtls',
+      --[[ '-javaagent:' .. server_path .. '/lombok.jar', ]]
+      '-javaagent: lombok.jar',
+      '-configuration', cache_path .. '/config',
+      '-data', cache_path .. '/workspace'
+    },
   },
+  volar = {},
   rust_analyzer = {},
   jsonls = {},
-  tsserver = {},
-  volar = {},
-  jdtls = {}
+  --[[ tsserver = {} ]]
 }
 
 return {
@@ -67,9 +63,25 @@ return {
 
         mason_lspconfig.setup_handlers {
           function(server_name)
-            require('lspconfig')[server_name].setup {
-              settings = servers[server_name],
-            }
+            if server_name ~= 'volar' then
+              require('lspconfig')[server_name].setup {
+                settings = servers[server_name],
+              }
+            else
+              require('lspconfig').volar.setup {
+                filetypes = {
+                  'typescript',
+                  'javascript',
+                  'vue',
+                  'json'
+                },
+                init_options = {
+                  typescript = {
+                    tsdk = ''
+                  }
+                }
+              }
+            end
           end
         }
       end

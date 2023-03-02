@@ -35,6 +35,8 @@ source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 KUBECONFIG="$HOME/.kube/config"
 export KUBECONFIG="$KUBECONFIG:$HOME/.kube/virtual"
 
+export JAVA_HOME="/usr/lib/jvm/java"
+
 # Completion
 zstyle ':completion:*' completer _expand _complete _ignored _approximate
 zstyle ':completion:*' group-name ''
