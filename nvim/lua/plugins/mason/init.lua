@@ -30,7 +30,7 @@ vim.diagnostic.config({
 --[[ local lsp_servers_path = vim.fn.stdpath('data') .. "/mason/packages" ]]
 local cache_path = os.getenv('HOME') .. '.cache/jdtls'
 local servers = {
-  sumneko_lua = require('plugins.mason.lua'),
+  lua_ls = require('plugins.mason.lua'),
   --[[ jdtls = require('plugins.mason.java'), ]]
   jdtls = {
     cmd = {
@@ -48,60 +48,62 @@ local servers = {
 }
 
 return {
-  'williamboman/mason.nvim',
-  dependencies = {
-    'neovim/nvim-lspconfig',
-    'mfussenegger/nvim-jdtls',
-    {
-      'williamboman/mason-lspconfig.nvim',
-      config = function()
-        local mason_lspconfig = require('mason-lspconfig')
-
-        mason_lspconfig.setup {
-          ensure_installed = vim.tbl_keys(servers)
-        }
-
-        mason_lspconfig.setup_handlers {
-          function(server_name)
-            if server_name ~= 'volar' then
-              require('lspconfig')[server_name].setup {
-                settings = servers[server_name],
-              }
-            else
-              require('lspconfig').volar.setup {
-                filetypes = {
-                  'typescript',
-                  'javascript',
-                  'vue',
-                  'json'
-                },
-                init_options = {
-                  typescript = {
-                    tsdk = ''
-                  }
-                }
-              }
-            end
-          end
-        }
-      end
-    },
-    {
-      'j-hui/fidget.nvim',
-      config = function()
-        require('fidget').setup {}
-      end
-    }
-  },
-  config = function()
-    require('mason').setup {
-      ui = {
-        icons = {
-          server_installed = "✓",
-          server_pending = "➜",
-          server_uninstalled = "✗"
+  {
+    'williamboman/mason.nvim',
+    config = function()
+      require('mason').setup {
+        ui = {
+          icons = {
+            server_installed = "✓",
+            server_pending = "➜",
+            server_uninstalled = "✗"
+          }
         }
       }
-    }
-  end
+    end
+  },
+  {
+    'williamboman/mason-lspconfig.nvim',
+    dependencies = {
+      'neovim/nvim-lspconfig'
+    },
+    config = function()
+      local mason_lspconfig = require('mason-lspconfig')
+
+      mason_lspconfig.setup {
+        ensure_installed = vim.tbl_keys(servers)
+      }
+
+      mason_lspconfig.setup_handlers {
+        function(server_name)
+          if server_name ~= 'volar' then
+            require('lspconfig')[server_name].setup {
+              settings = servers[server_name],
+            }
+          else
+            require('lspconfig').volar.setup {
+              filetypes = {
+                'typescript',
+                'javascript',
+                'vue',
+                'json'
+              },
+              init_options = {
+                typescript = {
+                  tsdk = ''
+                }
+              }
+            }
+          end
+        end
+      }
+    end
+  },
+  {
+    'j-hui/fidget.nvim',
+    config = function()
+      require('fidget').setup {}
+    end
+  }
 }
+
