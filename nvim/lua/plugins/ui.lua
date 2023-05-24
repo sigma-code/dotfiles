@@ -1,5 +1,6 @@
 return {
   { 'kyazdani42/nvim-web-devicons' },
+  { 'folke/tokyonight.nvim' },
   { 'EdenEast/nightfox.nvim' },
   { 'Shatur/neovim-ayu' },
   { 'sainnhe/everforest' },

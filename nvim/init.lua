@@ -64,5 +64,6 @@ require('lazy').setup('plugins')
 -- vim.cmd('colorscheme dracula')
 -- vim.cmd('colorscheme yitzchok')
 -- vim.cmd('colorscheme nightfox')
-vim.cmd('colorscheme ayu-mirage')
+-- vim.cmd('colorscheme ayu-mirage')
+vim.cmd('colorscheme tokyonight')
 
