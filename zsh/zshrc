@@ -33,7 +33,10 @@ source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Kubectl
 #source <(kubectl completion zsh)
 KUBECONFIG="$HOME/.kube/config"
-export KUBECONFIG="$KUBECONFIG:$HOME/.kube/virtual"
+for config in $(ls $HOME/.kube/*.yml); do
+  KUBECONFIG="$KUBECONFIG:$config"
+done
+export KUBECONFIG
 
 export JAVA_HOME="/usr/lib/jvm/java"
 
@@ -102,3 +105,6 @@ if [ -f "$HOME/.local/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/.local/goo
 
 # The next line enables shell command completion for gcloud.
 if [ -f "$HOME/.local/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/.local/google-cloud-sdk/completion.zsh.inc"; fi
+
+# bun completions
+[ -s "/home/pablo/.bun/_bun" ] && source "/home/pablo/.bun/_bun"
