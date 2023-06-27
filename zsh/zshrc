@@ -32,11 +32,7 @@ source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 #source /usr/share/fzf/key-bindings.zsh
 # Kubectl
 #source <(kubectl completion zsh)
-KUBECONFIG="$HOME/.kube/config"
-for config in $(ls $HOME/.kube/*.yml); do
-  KUBECONFIG="$KUBECONFIG:$config"
-done
-export KUBECONFIG
+export KUBECONFIG="$HOME/.kube/config"
 
 export JAVA_HOME="/usr/lib/jvm/java"
 
