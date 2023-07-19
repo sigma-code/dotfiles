@@ -44,6 +44,7 @@ local servers = {
   volar = {},
   rust_analyzer = {},
   jsonls = {},
+  gopls = {},
   --[[ tsserver = {} ]]
 }
 
@@ -80,6 +81,8 @@ return {
             require('lspconfig')[server_name].setup {
               settings = servers[server_name],
             }
+          elseif server_name ~= 'gopls' then
+            require('lspconfig').gopls.setup {}
           else
             require('lspconfig').volar.setup {
               filetypes = {
