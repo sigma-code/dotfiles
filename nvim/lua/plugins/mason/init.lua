@@ -77,13 +77,7 @@ return {
 
       mason_lspconfig.setup_handlers {
         function(server_name)
-          if server_name ~= 'volar' then
-            require('lspconfig')[server_name].setup {
-              settings = servers[server_name],
-            }
-          elseif server_name ~= 'gopls' then
-            require('lspconfig').gopls.setup {}
-          else
+          if server_name == 'volar' then
             require('lspconfig').volar.setup {
               filetypes = {
                 'typescript',
@@ -96,6 +90,12 @@ return {
                   tsdk = ''
                 }
               }
+            }
+          elseif server_name == 'gopls' then
+            require('lspconfig').gopls.setup {}
+          else
+            require('lspconfig')[server_name].setup {
+              settings = servers[server_name],
             }
           end
         end

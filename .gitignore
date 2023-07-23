@@ -23,4 +23,5 @@ nvim/nv-settings.lua
 nvim/lv-settings.lua
 nvim/.stylua.toml
 nvim/lua/lv-user-config/
+nvim/lua/.luarc.json
 

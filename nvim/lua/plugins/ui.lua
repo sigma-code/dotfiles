@@ -6,6 +6,7 @@ return {
   { 'sainnhe/everforest' },
   { 'sainnhe/sonokai' },
   { 'NLKNguyen/papercolor-theme' },
-  { 'rainglow/vim' },
+  { 'sainnhe/sonokai' }
+  --[[ { 'rainglow/vim' }, ]]
   -- { 'christianchiarulli/nvcode-color-schemes.vim' },
 }
