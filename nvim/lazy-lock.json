@@ -9,7 +9,7 @@
   "everforest": { "branch": "master", "commit": "1db527e770deb8cbb3b5b60d8921f80bd2a4c12c" },
   "fidget.nvim": { "branch": "main", "commit": "0ba1e16d07627532b6cae915cc992ecac249fb97" },
   "gitsigns.nvim": { "branch": "main", "commit": "c18b7ca0b5b50596722f3a1572eb9b8eb520c0f1" },
-  "lazy.nvim": { "branch": "main", "commit": "761b8388af5bcb451e30d886163fcd129278e1d1" },
+  "lazy.nvim": { "branch": "main", "commit": "3ad55ae678876516156cca2f361c51f7952a924b" },
   "lspkind-nvim": { "branch": "master", "commit": "57610d5ab560c073c465d6faf0c19f200cb67e6e" },
   "lualine.nvim": { "branch": "master", "commit": "05d78e9fd0cdfb4545974a5aa14b1be95a86e9c9" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "c55d18f3947562e699d34d89681edbf9f0e250d3" },
@@ -33,6 +33,5 @@
   "telescope-fzy-native.nvim": { "branch": "master", "commit": "282f069504515eec762ab6d6c89903377252bf5b" },
   "telescope.nvim": { "branch": "master", "commit": "057ee0f8783872635bc9bc9249a4448da9f99123" },
   "toggleterm.nvim": { "branch": "main", "commit": "a44313fb28ed9bc9837c2b99dec1c6eed3a4f47f" },
-  "tokyonight.nvim": { "branch": "main", "commit": "101902a1598a355062229b9f8e20aacac91b264c" },
-  "vim": { "branch": "master", "commit": "837fd7292274e0ee2f3b5aee4519c3f74d7dc3d1" }
+  "tokyonight.nvim": { "branch": "main", "commit": "101902a1598a355062229b9f8e20aacac91b264c" }
 }
